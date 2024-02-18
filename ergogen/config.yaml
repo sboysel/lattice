@@ -11,12 +11,13 @@ units:
   px: kx/2
   py: ky/2
   dx: -0.4kx
-  dy: py/2
+  dy: 0
   dr: 270
   vx: 0
   vy: py/2
   topy: ky
-  usby: topy - 2
+  usbx: 0
+  usby: topy - 2.2
 
 points:
   zones:
@@ -81,7 +82,40 @@ pcbs:
           designator: D
           value: 1N4148W
           side: B
-      
+      usb_host:
+        what: placeholder
+        where:
+          ref: matrix_outer_top
+        adjust:
+          shift: [usbx, usby]
+        params:
+          designator: J
+          value: USB_C_Receptacle
+          side: B
+      usb_peripheral:
+        what: placeholder
+        where:
+          ref: matrix_inner_top
+        adjust:
+          shift: [usbx, usby]
+        params:
+          designator: J
+          value: USB_C_Receptacle
+          side: B
+      u1:
+        what: placeholder
+        where:
+          ref: matrix_middle_top
+        adjust:
+          shift: [0, px]
+          rotate: 45
+        params:
+          designator: U
+          value: RP2040
+          side: B
+        
+        
+
       # diodes_top:
       #   what: sod123_pad2_tht
       #   where:
