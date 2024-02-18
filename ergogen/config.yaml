@@ -44,16 +44,12 @@ outlines:
   pcb:
     - what: polygon
       points:
-        # NW
         - ref: matrix_outer_top
           shift: [-px, topy]
-        # NE
         - ref: matrix_inner_top
           shift: [px, topy]
-        # SE
         - ref: matrix_inner_mods
           shift: [px, -py]
-        # SW
         - ref: matrix_outer_mods
           shift: [-px, -py]
       fillet: 3
@@ -82,7 +78,7 @@ pcbs:
           designator: D
           value: 1N4148W
           side: B
-      usb_host:
+      j1: # usb c receptacle (host)
         what: placeholder
         where:
           ref: matrix_outer_top
@@ -92,7 +88,7 @@ pcbs:
           designator: J
           value: USB_C_Receptacle
           side: B
-      usb_peripheral:
+      j2: # usb c receptacle (peripheral)
         what: placeholder
         where:
           ref: matrix_inner_top
@@ -102,154 +98,38 @@ pcbs:
           designator: J
           value: USB_C_Receptacle
           side: B
-      u1:
+      u1: # rp2040
         what: placeholder
         where:
           ref: matrix_middle_top
         adjust:
-          shift: [0, px]
+          shift: [0, 5py/4]
           rotate: 45
         params:
           designator: U
           value: RP2040
           side: B
-        
-        
-
-      # diodes_top:
-      #   what: sod123_pad2_tht
-      #   where:
-      #     - /_top/
-      #     - /_home/
-      #   adjust:
-      #     shift: [-px/2, -py]
-      #     rotate: 0
-      #   params:
-      #     from: "{{colrow}}"
-      #     to: "{{row_net}}"
-      #     side: 'B'
-      #     value: 'SOD-123 1N4148W'
-      # diodes_mods:
-      #   what: sod123_pad2_tht
-      #   where:
-      #     - /_mods/
-      #   adjust:
-      #     shift: [-px/2, py]
-      #     rotate: 0
-      #   params:
-      #     from: "{{colrow}}"
-      #     to: "{{row_net}}"
-      #     side: 'B'
-      #     value: 'SOD-123 1N4148W'       
-      # CH552T:
-      #   what: tssop20
-      #   where:
-      #     ref: matrix_middle_top
-      #     shift: [px, py/2 + 0.5]
-      #   adjust:
-      #     rotate: 270
-      #   params:
-      #     side: B
-      #     reference: U1
-      #     value: CH552T
-      #     P1: COL1
-      #     P2: COL2
-      #     P3: COL3
-      #     P4: COL4
-      #     P5: COL5
-      #     P6: RST
-      #     P7: ROW1
-      #     P8: ROW2
-      #     P9: ROW3
-      #     P10: ROW4
-      #     P11: ''
-      #     P12: ''
-      #     P13: ''
-      #     P14: DP
-      #     P15: DN
-      #     P16: TX # output
-      #     P17: RX # input
-      #     P18: GND
-      #     P19: VCC
-      #     P20: V33
-      # # Connectors
-      # usb_host:
-      #   what: usbc
-      #   where:
-      #     ref: matrix_outer_top
-      #     shift: [0, usby]
-      #   adjust:
-      #     rotate: 180
-      #   params:
-      #     side: 'B'
-      #     reference: 'J1'
-      #     S1: ''
-      #     S2: ''
-      #     S3: ''
-      #     S4: ''
-      #     B1_A12: GND
-      #     B4_A9: VCC
-      #     A8: ''
-      #     B8: ''
-      #     A7: DN
-      #     B7: DN
-      #     A6: DP
-      #     B6: DP
-      #     A5: CC1 # 5.1k Ohm resistor -> GND
-      #     B5: CC2 # 5.1k Ohm resistor -> GND
-      #     A4_B9: VCC
-      #     A1_B12: GND
-      # usb_split:
-      #   what: usbc
-      #   where:
-      #     ref: matrix_inner_top
-      #     shift: [0, usby]
-      #   adjust:
-      #     rotate: 180    
-      #   params:
-      #     side: B
-      #     reference: J2  
-      #     S1: '' 
-      #     S2: ''
-      #     S3: ''
-      #     S4: ''
-      #     B1_A12: GND
-      #     B4_A9: VCC
-      #     A8: ''
-      #     B8: ''
-      #     A7: TX
-      #     B7: TX
-      #     A6: RX
-      #     B6: RX
-      #     A5: ''
-      #     B5: ''
-      #     A4_B9: VCC
-      #     A1_B12: GND
-      # # silkscreen text
-      # jlc_text:
-      #   what: text 
-      #   where:
-      #     ref: matrix_pinky_home
-      #     shift: [px, py/2]
-      #   params:
-      #     text: 'JLCJLCJLCJLC'
-      #     side: 'B'
-      #     justify: 'mirror'
-      # side_text:
-      #   what: text 
-      #   where:
-      #     ref: matrix_middle_home
-      #     shift: [0, py/2]
-      #   params:
-      #     text: 'left'
-      #     side: 'B'
-      #     justify: 'mirror'
-      # version_text:
-      #   what: text 
-      #   where:
-      #     ref: matrix_index_home
-      #     shift: [px, py/2]
-      #   params:
-      #     text: 'moonfish v2024.01'
-      #     side: 'B'
-      #     justify: 'mirror'
+      jlc_text:
+        what: text 
+        where:
+          ref: matrix_outer_mods
+          shift: [px, py]
+        params:
+          text: JLCJLCJLCJLC
+          side: F
+      side_text:
+        what: text 
+        where:
+          ref: matrix_index_mods
+          shift: [0, py]
+        params:
+          text: left
+          side: F
+      version_text:
+        what: text 
+        where:
+          ref: matrix_inner_mods
+          shift: [0, py]
+        params:
+          text: 'lattice v2024.02'
+          side: F

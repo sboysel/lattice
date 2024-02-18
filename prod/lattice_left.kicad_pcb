@@ -658,12 +658,27 @@
     
         (module RP2040 (layer B.Cu)
 
-            (at 152.4 47.62500000000001 45)
+            (at 152.4 45.243750000000006 45)
             (fp_text reference "U1" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
         )
     
+        
+
+            (gr_text "JLCJLCJLCJLC" (at 104.775 104.77499999999999 0) (layer F.SilkS)
+                (effects (font (size 1 1) (thickness 0.15)) )
+            )
+        
+
+            (gr_text "left" (at 171.45 104.77499999999999 0) (layer F.SilkS)
+                (effects (font (size 1 1) (thickness 0.15)) )
+            )
+        
+
+            (gr_text "lattice v2024.02" (at 190.5 104.77499999999999 0) (layer F.SilkS)
+                (effects (font (size 1 1) (thickness 0.15)) )
+            )
         
   (gr_line (start 85.725 120.825) (end 85.725 41.10000000000001) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 88.725 38.10000000000001) (end 197.025 38.10000000000001) (angle 90) (layer Edge.Cuts) (width 0.15))
