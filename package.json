@@ -1,0 +1,7 @@
+{
+    "name": "lattice",
+    "version": "2024.02",
+    "dependencies": {
+        "ergogen": "github:ergogen/ergogen#develop"
+    }
+}

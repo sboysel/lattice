@@ -1,0 +1,8 @@
+node_modules
+package-lock.json
+**/fp-info-cache
+**/*_autosave*
+**/*.lck
+prod/~*.lck
+prod/*-backups/
+prod/*auto_saved_files*
