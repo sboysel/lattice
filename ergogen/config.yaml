@@ -149,7 +149,7 @@ pcbs:
           designator: Y
           value: Crystal_GND24_Small
           side: B
-      f1: # fuse
+      f1: # polyfuse 500mA
         what: placeholder
         where:
           ref: matrix_outer_top
@@ -158,7 +158,29 @@ pcbs:
           rotate: 90
         params:
           designator: F
-          value: Polyfuse_Small
+          value: 500mA
+          side: B
+      r1: # 5k1
+        what: placeholder
+        where:
+          ref: matrix_outer_top
+        adjust:
+          shift: [-7, py + 1]
+          rotate: 180
+        params:
+          designator: R
+          value: 5k1
+          side: B
+      r2: # 5k1
+        what: placeholder
+        where:
+          ref: matrix_outer_top
+        adjust:
+          shift: [-7, py - 1]
+          rotate: 180
+        params:
+          designator: R
+          value: 5k1
           side: B
       oshw: # make sure to uncheck "exclude from board" in schematic
         what: placeholder 

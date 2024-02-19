@@ -711,10 +711,32 @@
         
 
     
-        (module Polyfuse_Small (layer B.Cu)
+        (module 500mA (layer B.Cu)
 
             (at 104.775 45.243750000000006 90)
             (fp_text reference "F1" (at 0 0 0) (layer "B.Fab")
+              (effects (font (size 1 1) (thickness 0.15)))
+            )
+        )
+    
+        
+
+    
+        (module 5k1 (layer B.Cu)
+
+            (at 88.25 46.62500000000001 180)
+            (fp_text reference "R1" (at 0 0 0) (layer "B.Fab")
+              (effects (font (size 1 1) (thickness 0.15)))
+            )
+        )
+    
+        
+
+    
+        (module 5k1 (layer B.Cu)
+
+            (at 88.25 48.62500000000001 180)
+            (fp_text reference "R2" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
         )

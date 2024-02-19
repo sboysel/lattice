@@ -418,22 +418,7 @@
       "version": 3
     },
     "net_colors": null,
-    "netclass_assignments": {
-      "/+3V3": "+3V3",
-      "/+5V": "+5V",
-      "/CC1": "CC1",
-      "/CC2": "CC2",
-      "/COL1": "COL1",
-      "/COL2": "COL2",
-      "/COL3": "COL3",
-      "/COL4": "COL4",
-      "/COL5": "COL5",
-      "/COL6": "COL6",
-      "/ROW1": "ROW1",
-      "/ROW2": "ROW2",
-      "/ROW3": "ROW3",
-      "/ROW4": "ROW4"
-    },
+    "netclass_assignments": null,
     "netclass_patterns": [
       {
         "netclass": "Default",
