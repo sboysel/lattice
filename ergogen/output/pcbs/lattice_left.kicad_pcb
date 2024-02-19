@@ -666,18 +666,84 @@
     
         
 
+    
+        (module W25Q128JVS (layer B.Cu)
+
+            (at 114.3 45.243750000000006 0)
+            (fp_text reference "U2" (at 0 0 0) (layer "B.Fab")
+              (effects (font (size 1 1) (thickness 0.15)))
+            )
+        )
+    
+        
+
+    
+        (module USBLC6-2SC6 (layer B.Cu)
+
+            (at 133.35 45.243750000000006 0)
+            (fp_text reference "U3" (at 0 0 0) (layer "B.Fab")
+              (effects (font (size 1 1) (thickness 0.15)))
+            )
+        )
+    
+        
+
+    
+        (module XC6206PxxxMR (layer B.Cu)
+
+            (at 166.6875 45.243750000000006 0)
+            (fp_text reference "U4" (at 0 0 0) (layer "B.Fab")
+              (effects (font (size 1 1) (thickness 0.15)))
+            )
+        )
+    
+        
+
+    
+        (module Crystal_GND24_Small (layer B.Cu)
+
+            (at 176.21249999999998 45.243750000000006 0)
+            (fp_text reference "Y1" (at 0 0 0) (layer "B.Fab")
+              (effects (font (size 1 1) (thickness 0.15)))
+            )
+        )
+    
+        
+
+    
+        (module Polyfuse_Small (layer B.Cu)
+
+            (at 104.775 45.243750000000006 90)
+            (fp_text reference "F1" (at 0 0 0) (layer "B.Fab")
+              (effects (font (size 1 1) (thickness 0.15)))
+            )
+        )
+    
+        
+
+    
+        (module Logo_Open_Hardware_Small (layer B.Cu)
+
+            (at 142.875 104.77499999999999 180)
+            (fp_text reference "SYM1" (at 0 0 0) (layer "B.Fab")
+              (effects (font (size 1 1) (thickness 0.15)))
+            )
+        )
+    
+        
+
             (gr_text "JLCJLCJLCJLC" (at 104.775 104.77499999999999 0) (layer F.SilkS)
                 (effects (font (size 1 1) (thickness 0.15)) )
             )
         
 
-            (gr_text "left" (at 171.45 104.77499999999999 0) (layer F.SilkS)
-                (effects (font (size 1 1) (thickness 0.15)) )
+            (gr_text "left" (at 104.775 104.77499999999999 0) (layer B.SilkS knockout)
+                (effects (font  (face "JetBrainsMono NF") (size 1 1) (thickness 0.15)) (justify mirror))
             )
         
 
-            (gr_text "lattice v2024.02" (at 190.5 104.77499999999999 0) (layer F.SilkS)
-                (effects (font (size 1 1) (thickness 0.15)) )
+            (gr_text "lattice v2024.02" (at 180.975 104.77499999999999 0) (layer B.SilkS knockout)
+                (effects (font  (face "JetBrainsMono NF") (size 1 1) (thickness 0.15)) (justify mirror))
             )
         
   (gr_line (start 85.725 120.825) (end 85.725 41.10000000000001) (angle 90) (layer Edge.Cuts) (width 0.15))

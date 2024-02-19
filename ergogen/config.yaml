@@ -109,6 +109,68 @@ pcbs:
           designator: U
           value: RP2040
           side: B
+      u2: # W25Q128JVS (FLASH 128MB)
+        what: placeholder
+        where:
+          ref: matrix_pinky_top
+        adjust:
+          shift: [0, 5py/4]
+        params:
+          designator: U
+          value: W25Q128JVS
+          side: B
+      u3: # USBLC6-2SC6 (transient voltage suppressor)
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [0, 5py/4]
+        params:
+          designator: U
+          value: USBLC6-2SC6
+          side: B
+      u4: # XC6206PxxxMR
+        what: placeholder
+        where:
+          ref: matrix_index_top
+        adjust:
+          shift: [-px/2, 5py/4]
+        params:
+          designator: U
+          value: XC6206PxxxMR
+          side: B
+      y1: # Crystal_GND24_Small (0603 SMD)
+        what: placeholder
+        where:
+          ref: matrix_index_top
+        adjust:
+          shift: [px/2, 5py/4]
+        params:
+          designator: Y
+          value: Crystal_GND24_Small
+          side: B
+      f1: # fuse
+        what: placeholder
+        where:
+          ref: matrix_outer_top
+        adjust:
+          shift: [px, 5py/4]
+          rotate: 90
+        params:
+          designator: F
+          value: Polyfuse_Small
+          side: B
+      oshw: # make sure to uncheck "exclude from board" in schematic
+        what: placeholder 
+        where:
+          ref: matrix_ring_mods
+        adjust:
+          shift: [px, py]
+          rotate: 180
+        params:
+          designator: SYM
+          value: Logo_Open_Hardware_Small
+          side: B
       jlc_text:
         what: text 
         where:
@@ -120,16 +182,22 @@ pcbs:
       side_text:
         what: text 
         where:
-          ref: matrix_index_mods
-          shift: [0, py]
+          ref: matrix_outer_mods
+          shift: [px, py]
         params:
           text: left
-          side: F
+          side: B
+          justify: mirror
+          knockout: true
+          face: "JetBrainsMono NF"
       version_text:
         what: text 
         where:
-          ref: matrix_inner_mods
-          shift: [0, py]
+          ref: matrix_index_mods
+          shift: [px, py]
         params:
           text: 'lattice v2024.02'
-          side: F
+          side: B
+          justify: mirror
+          knockout: true
+          face: "JetBrainsMono NF"

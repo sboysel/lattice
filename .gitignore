@@ -6,3 +6,4 @@ package-lock.json
 prod/~*.lck
 prod/*-backups/
 prod/*auto_saved_files*
+.DS_Store
