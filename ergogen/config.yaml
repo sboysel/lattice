@@ -61,6 +61,7 @@ pcbs:
         outline: pcb
         footprints:
     footprints:
+      # === Switches (Cherry MX hotswap)
       mx:
         what: placeholder
         where: true
@@ -68,6 +69,8 @@ pcbs:
           designator: MX
           value: MX_SW_HS
           side: B
+
+      # === Diodes
       diode:
         what: placeholder
         where: true
@@ -78,6 +81,8 @@ pcbs:
           designator: D
           value: 1N4148W
           side: B
+
+      # === USB C receptacle (host)
       j1: # usb c receptacle (host)
         what: placeholder
         where:
@@ -88,73 +93,12 @@ pcbs:
           designator: J
           value: USB_C_Receptacle
           side: B
-      j2: # usb c receptacle (peripheral)
-        what: placeholder
-        where:
-          ref: matrix_inner_top
-        adjust:
-          shift: [usbx, usby]
-        params:
-          designator: J
-          value: USB_C_Receptacle
-          side: B
-      u1: # rp2040
-        what: placeholder
-        where:
-          ref: matrix_middle_top
-        adjust:
-          shift: [0, 5py/4]
-          rotate: 45
-        params:
-          designator: U
-          value: RP2040
-          side: B
-      u2: # W25Q128JVS (FLASH 128MB)
-        what: placeholder
-        where:
-          ref: matrix_pinky_top
-        adjust:
-          shift: [0, 5py/4]
-        params:
-          designator: U
-          value: W25Q128JVS
-          side: B
-      u3: # USBLC6-2SC6 (transient voltage suppressor)
-        what: placeholder
-        where:
-          ref: matrix_ring_top
-        adjust:
-          shift: [0, 5py/4]
-        params:
-          designator: U
-          value: USBLC6-2SC6
-          side: B
-      u4: # XC6206PxxxMR
-        what: placeholder
-        where:
-          ref: matrix_index_top
-        adjust:
-          shift: [-px/2, 5py/4]
-        params:
-          designator: U
-          value: XC6206PxxxMR
-          side: B
-      y1: # Crystal_GND24_Small (0603 SMD)
-        what: placeholder
-        where:
-          ref: matrix_index_top
-        adjust:
-          shift: [px/2, 5py/4]
-        params:
-          designator: Y
-          value: Crystal_GND24_Small
-          side: B
       f1: # polyfuse 500mA
         what: placeholder
         where:
           ref: matrix_outer_top
         adjust:
-          shift: [px, 5py/4]
+          shift: [7, 3py/2]
           rotate: 90
         params:
           designator: F
@@ -182,6 +126,185 @@ pcbs:
           designator: R
           value: 5k1
           side: B
+
+      # === USB C receptacle (peripheral)
+      j2: 
+        what: placeholder
+        where:
+          ref: matrix_inner_top
+        adjust:
+          shift: [usbx, usby]
+        params:
+          designator: J
+          value: USB_C_Receptacle
+          side: B
+      
+      # === RP2040
+      u1:
+        what: placeholder
+        where:
+          ref: matrix_middle_top
+        adjust:
+          shift: [0, 5py/4]
+          rotate: 45
+        params:
+          designator: U
+          value: RP2040
+          side: B
+      
+      # === U2
+      u2: # W25Q128JVS (FLASH 128MB)
+        what: placeholder
+        where:
+          ref: matrix_pinky_top
+        adjust:
+          shift: [-px/2, 3py/2]
+          rotate: 90
+        params:
+          designator: U
+          value: W25Q128JVS
+          side: B
+      c1:
+        what: placeholder
+        where:
+          ref: matrix_pinky_top
+        adjust:
+          shift: [px/3 - 1, 3py/2]
+          rotate: 90
+        params:
+          designator: C
+          value: 1uF
+          side: B
+      c2:
+        what: placeholder
+        where:
+          ref: matrix_pinky_top
+        adjust:
+          shift: [px/3 + 1, 3py/2]
+          rotate: 90
+        params:
+          designator: C
+          value: 1uF
+          side: B
+
+      # === USBLC6-2SC6 (transient voltage suppressor)
+      u3: 
+        what: placeholder
+        where:
+          ref: matrix_pinky_top
+        adjust:
+          shift: [-px/2, 3py/2 - 5]
+          rotate: 90
+        params:
+          designator: U
+          value: USBLC6-2SC6
+          side: B
+      
+      # === XC6206PxxxMR (flash memory)
+      u4:
+        what: placeholder
+        where:
+          ref: matrix_index_top
+        adjust:
+          shift: [-px/2, 3py/2]
+        params:
+          designator: U
+          value: XC6206PxxxMR
+          side: B
+      c16:
+        what: placeholder
+        where:
+          ref: matrix_middle_top
+        adjust:
+          shift: [px, 7py/8]
+          rotate: 90
+        params:
+          designator: C
+          value: 100nF
+          side: B
+      r6:
+        what: placeholder
+        where:
+          ref: matrix_index_top
+        adjust:
+          shift: [-px/2, py]
+          rotate: 0
+        params:
+          designator: R
+          value: 1k
+          side: B
+      
+      # === Crystal Oscillator (Crystal_GND24_Small)   
+      # 12MHz 3225 SMD 4 PIN
+      y1: # 
+        what: placeholder
+        where:
+          ref: matrix_index_top
+        adjust:
+          shift: [px/2, 3py/2]
+        params:
+          designator: Y
+          value: 12MHz
+          side: B
+      c17:
+        what: placeholder
+        where:
+          ref: matrix_index_top
+        adjust:
+          shift: [px - 1, 3py/2]
+          rotate: 90
+        params:
+          designator: C
+          value: 22pF
+          side: B
+      c18:
+        what: placeholder
+        where:
+          ref: matrix_index_top
+        adjust:
+          shift: [px + 1, 3py/2]
+          rotate: 90
+        params:
+          designator: C
+          value: 22pF
+          side: B
+      r7:
+        what: placeholder
+        where:
+          ref: matrix_index_top
+        adjust:
+          shift: [px/2, py]
+          rotate: 0
+        params:
+          designator: R
+          value: 1k
+          side: B
+
+      # === buttons
+      sw1: # button: BOOT
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [-px/2, py]
+          rotate: 90
+        params:
+          designator: SW
+          value: SW_Push
+          side: B
+      sw2: # button: RESET
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [px/2, py]
+          rotate: 90
+        params:
+          designator: SW
+          value: SW_Push
+          side: B
+      
+      # === logos and text
       oshw: # make sure to uncheck "exclude from board" in schematic
         what: placeholder 
         where:
