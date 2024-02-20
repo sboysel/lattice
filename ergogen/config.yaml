@@ -151,6 +151,40 @@ pcbs:
           designator: U
           value: RP2040
           side: B
+      r3: # 27R
+        what: placeholder
+        where:
+          ref: matrix_middle_top
+        adjust:
+          shift: [8, 3py/2 + 2]
+          rotate: 0
+        params:
+          designator: R
+          value: 27R
+          side: B
+      r4: # 27R
+        what: placeholder
+        where:
+          ref: matrix_middle_top
+        adjust:
+          shift: [8, 3py/2]
+          rotate: 0
+        params:
+          designator: R
+          value: 27R
+          side: B
+      r5: # 1k
+        what: placeholder
+        where:
+          ref: matrix_middle_top
+        adjust:
+          shift: [8, 3py/2 - 2]
+          rotate: 0
+        params:
+          designator: R
+          value: 1k
+          side: B
+
       
       # === U2
       u2: # W25Q128JVS (FLASH 128MB)
@@ -206,12 +240,12 @@ pcbs:
         where:
           ref: matrix_index_top
         adjust:
-          shift: [-px/2, 3py/2]
+          shift: [-px/3, 3py/2]
         params:
           designator: U
           value: XC6206PxxxMR
           side: B
-      c16:
+      c3:
         what: placeholder
         where:
           ref: matrix_middle_top
@@ -246,23 +280,23 @@ pcbs:
           designator: Y
           value: 12MHz
           side: B
-      c17:
+      c4:
         what: placeholder
         where:
           ref: matrix_index_top
         adjust:
-          shift: [px - 1, 3py/2]
+          shift: [px, 3py/2]
           rotate: 90
         params:
           designator: C
           value: 22pF
           side: B
-      c18:
+      c5:
         what: placeholder
         where:
           ref: matrix_index_top
         adjust:
-          shift: [px + 1, 3py/2]
+          shift: [px, 3py/2]
           rotate: 90
         params:
           designator: C
@@ -281,28 +315,165 @@ pcbs:
           side: B
 
       # === buttons
-      sw1: # button: BOOT
+      sw1: # button: RESET
         what: placeholder
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [-px/2, py]
-          rotate: 90
+          shift: [-px/2, 3py/2 + 1]
+          rotate: 0
         params:
           designator: SW
           value: SW_Push
           side: B
-      sw2: # button: RESET
+      sw2: # button: BOOT
         what: placeholder
         where:
           ref: matrix_ring_top
+        adjust:
+          shift: [px/2, 3py/2 + 1]
+          rotate: 0
+        params:
+          designator: SW
+          value: SW_Push
+          side: B
+
+      # === decoupling capcitors
+      # +3V3
+      c6:
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [-px + 2, py]
+          rotate: 90
+        params:
+          designator: C
+          value: 10uF
+          side: B
+      c7:
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [-px + 4, py]
+          rotate: 90
+        params:
+          designator: C
+          value: 1uF
+          side: B
+      c8:
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [-px + 6, py]
+          rotate: 90
+        params:
+          designator: C
+          value: 100nF
+          side: B
+      c9:
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [-px + 8, py]
+          rotate: 90
+        params:
+          designator: C
+          value: 100nF
+          side: B
+      c10:
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [-px + 10, py]
+          rotate: 90
+        params:
+          designator: C
+          value: 100nF
+          side: B
+      c11:
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [-px + 12, py]
+          rotate: 90
+        params:
+          designator: C
+          value: 100nF
+          side: B
+      c12:
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [-px + 14, py]
+          rotate: 90
+        params:
+          designator: C
+          value: 100nF
+          side: B
+      c13:
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [-px + 16, py]
+          rotate: 90
+        params:
+          designator: C
+          value: 100nF
+          side: B
+      c14:
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [-px + 18, py]
+          rotate: 90
+        params:
+          designator: C
+          value: 100nF
+          side: B
+      # +1V1
+      c15:
+        what: placeholder
+        where:
+          ref: matrix_pinky_top
         adjust:
           shift: [px/2, py]
           rotate: 90
         params:
-          designator: SW
-          value: SW_Push
+          designator: C
+          value: 1uF
           side: B
+      c16:
+        what: placeholder
+        where:
+          ref: matrix_pinky_top
+        adjust:
+          shift: [px/2 + 2, py]
+          rotate: 90
+        params:
+          designator: C
+          value: 100nF
+          side: B
+      c17:
+        what: placeholder
+        where:
+          ref: matrix_pinky_top
+        adjust:
+          shift: [px/2 + 4, py]
+          rotate: 90
+        params:
+          designator: C
+          value: 100nF
+          side: B
+
       
       # === logos and text
       oshw: # make sure to uncheck "exclude from board" in schematic
