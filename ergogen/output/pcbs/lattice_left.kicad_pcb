@@ -691,7 +691,7 @@
     
         (module RP2040 (layer B.Cu)
 
-            (at 152.4 45.243750000000006 225)
+            (at 155.57500000000002 45.243750000000006 225)
             (fp_text reference "U1" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -702,7 +702,7 @@
     
         (module 27R (layer B.Cu)
 
-            (at 160.4 40.862500000000004 0)
+            (at 145.4 40.862500000000004 0)
             (fp_text reference "R3" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -713,7 +713,7 @@
     
         (module 27R (layer B.Cu)
 
-            (at 160.4 42.862500000000004 0)
+            (at 145.4 42.862500000000004 0)
             (fp_text reference "R4" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -724,7 +724,7 @@
     
         (module 1k (layer B.Cu)
 
-            (at 160.4 44.862500000000004 0)
+            (at 145.4 44.862500000000004 0)
             (fp_text reference "R5" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -790,7 +790,7 @@
     
         (module 100nF (layer B.Cu)
 
-            (at 161.925 48.815625000000004 90)
+            (at 171.45 48.815625000000004 90)
             (fp_text reference "C3" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -834,7 +834,7 @@
     
         (module 22pF (layer B.Cu)
 
-            (at 180.975 42.862500000000004 90)
+            (at 182.975 42.862500000000004 90)
             (fp_text reference "C5" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
