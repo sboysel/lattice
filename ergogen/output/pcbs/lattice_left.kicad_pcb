@@ -777,10 +777,65 @@
         
 
     
+        (module 12MHz (layer B.Cu)
+
+            (at 166.6875 42.862500000000004 0)
+            (fp_text reference "Y1" (at 0 0 0) (layer "B.Fab")
+              (effects (font (size 1 1) (thickness 0.15)))
+            )
+        )
+    
+        
+
+    
+        (module 1k (layer B.Cu)
+
+            (at 166.6875 47.62500000000001 90)
+            (fp_text reference "R6" (at 0 0 0) (layer "B.Fab")
+              (effects (font (size 1 1) (thickness 0.15)))
+            )
+        )
+    
+        
+
+    
+        (module 22pF (layer B.Cu)
+
+            (at 168.6875 47.62500000000001 90)
+            (fp_text reference "C3" (at 0 0 0) (layer "B.Fab")
+              (effects (font (size 1 1) (thickness 0.15)))
+            )
+        )
+    
+        
+
+    
+        (module 22pF (layer B.Cu)
+
+            (at 170.6875 47.62500000000001 90)
+            (fp_text reference "C4" (at 0 0 0) (layer "B.Fab")
+              (effects (font (size 1 1) (thickness 0.15)))
+            )
+        )
+    
+        
+
+    
         (module XC6206PxxxMR (layer B.Cu)
 
-            (at 168.27499999999998 42.862500000000004 0)
+            (at 174.625 42.862500000000004 0)
             (fp_text reference "U4" (at 0 0 0) (layer "B.Fab")
+              (effects (font (size 1 1) (thickness 0.15)))
+            )
+        )
+    
+        
+
+    
+        (module 1k (layer B.Cu)
+
+            (at 176.21249999999998 47.62500000000001 90)
+            (fp_text reference "R7" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
         )
@@ -790,63 +845,8 @@
     
         (module 100nF (layer B.Cu)
 
-            (at 171.45 48.815625000000004 90)
-            (fp_text reference "C3" (at 0 0 0) (layer "B.Fab")
-              (effects (font (size 1 1) (thickness 0.15)))
-            )
-        )
-    
-        
-
-    
-        (module 1k (layer B.Cu)
-
-            (at 166.6875 47.62500000000001 0)
-            (fp_text reference "R6" (at 0 0 0) (layer "B.Fab")
-              (effects (font (size 1 1) (thickness 0.15)))
-            )
-        )
-    
-        
-
-    
-        (module 12MHz (layer B.Cu)
-
-            (at 176.21249999999998 42.862500000000004 0)
-            (fp_text reference "Y1" (at 0 0 0) (layer "B.Fab")
-              (effects (font (size 1 1) (thickness 0.15)))
-            )
-        )
-    
-        
-
-    
-        (module 22pF (layer B.Cu)
-
-            (at 180.975 42.862500000000004 90)
-            (fp_text reference "C4" (at 0 0 0) (layer "B.Fab")
-              (effects (font (size 1 1) (thickness 0.15)))
-            )
-        )
-    
-        
-
-    
-        (module 22pF (layer B.Cu)
-
-            (at 182.975 42.862500000000004 90)
+            (at 178.21249999999998 47.62500000000001 90)
             (fp_text reference "C5" (at 0 0 0) (layer "B.Fab")
-              (effects (font (size 1 1) (thickness 0.15)))
-            )
-        )
-    
-        
-
-    
-        (module 1k (layer B.Cu)
-
-            (at 176.21249999999998 47.62500000000001 0)
-            (fp_text reference "R7" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
         )

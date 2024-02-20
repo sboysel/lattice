@@ -1,5 +1,5 @@
 meta:
-  engine: 4.0.4
+  engine: 4.0.5
   name: lattice
   version: 2024.02
   author: sboysel
@@ -234,41 +234,6 @@ pcbs:
           value: USBLC6-2SC6
           side: B
       
-      # === XC6206PxxxMR (volatage regulator)
-      # part number: XC6206
-      u4:
-        what: placeholder
-        where:
-          ref: matrix_index_top
-        adjust:
-          shift: [-px/3, 3py/2]
-        params:
-          designator: U
-          value: XC6206PxxxMR
-          side: B
-      c3:
-        what: placeholder
-        where:
-          ref: matrix_index_top
-        adjust:
-          shift: [0, 7py/8]
-          rotate: 90
-        params:
-          designator: C
-          value: 100nF
-          side: B
-      r6:
-        what: placeholder
-        where:
-          ref: matrix_index_top
-        adjust:
-          shift: [-px/2, py]
-          rotate: 0
-        params:
-          designator: R
-          value: 1k
-          side: B
-      
       # === Crystal Oscillator (Crystal_GND24_Small)   
       # 12MHz 3225 SMD 4 PIN
       # part number: C9002
@@ -277,32 +242,56 @@ pcbs:
         where:
           ref: matrix_index_top
         adjust:
-          shift: [px/2, 3py/2]
+          shift: [-px/2, 3py/2]
         params:
           designator: Y
           value: 12MHz
+          side: B
+      r6:
+        what: placeholder
+        where:
+          ref: matrix_index_top
+        adjust:
+          shift: [-px/2, py]
+          rotate: 90
+        params:
+          designator: R
+          value: 1k
+          side: B
+      c3:
+        what: placeholder
+        where:
+          ref: matrix_index_top
+        adjust:
+          shift: [-px/2 + 2, py]
+          rotate: 90
+        params:
+          designator: C
+          value: 22pF
           side: B
       c4:
         what: placeholder
         where:
           ref: matrix_index_top
         adjust:
-          shift: [px, 3py/2]
+          shift: [-px/2 + 4, py]
           rotate: 90
         params:
           designator: C
           value: 22pF
           side: B
-      c5:
+
+      # === XC6206PxxxMR (volatage regulator)
+      # part number: XC6206
+      u4:
         what: placeholder
         where:
           ref: matrix_index_top
         adjust:
-          shift: [px + 2, 3py/2]
-          rotate: 90
+          shift: [px/3, 3py/2]
         params:
-          designator: C
-          value: 22pF
+          designator: U
+          value: XC6206PxxxMR
           side: B
       r7:
         what: placeholder
@@ -310,10 +299,21 @@ pcbs:
           ref: matrix_index_top
         adjust:
           shift: [px/2, py]
-          rotate: 0
+          rotate: 90
         params:
           designator: R
           value: 1k
+          side: B
+      c5:
+        what: placeholder
+        where:
+          ref: matrix_index_top
+        adjust:
+          shift: [px/2 + 2, py]
+          rotate: 90
+        params:
+          designator: C
+          value: 100nF
           side: B
 
       # === buttons
