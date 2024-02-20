@@ -146,7 +146,7 @@ pcbs:
           ref: matrix_middle_top
         adjust:
           shift: [0, 5py/4]
-          rotate: 45
+          rotate: (45+180)
         params:
           designator: U
           value: RP2040
@@ -193,7 +193,7 @@ pcbs:
           ref: matrix_pinky_top
         adjust:
           shift: [-px/2, 3py/2]
-          rotate: 90
+          rotate: 270
         params:
           designator: U
           value: W25Q128JVS
@@ -203,8 +203,8 @@ pcbs:
         where:
           ref: matrix_pinky_top
         adjust:
-          shift: [px/3 - 1, 3py/2]
-          rotate: 90
+          shift: [-px, 3py/2]
+          rotate: 270
         params:
           designator: C
           value: 1uF
@@ -214,8 +214,8 @@ pcbs:
         where:
           ref: matrix_pinky_top
         adjust:
-          shift: [px/3 + 1, 3py/2]
-          rotate: 90
+          shift: [0, 3py/2]
+          rotate: 270
         params:
           designator: C
           value: 1uF
@@ -227,8 +227,8 @@ pcbs:
         where:
           ref: matrix_pinky_top
         adjust:
-          shift: [-px/2, 3py/2 - 5]
-          rotate: 90
+          shift: [px/2, 3py/2]
+          rotate: 270
         params:
           designator: U
           value: USBLC6-2SC6
@@ -362,7 +362,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [px, py]
+          shift: [5, py]
           rotate: 90
         params:
           designator: C
@@ -373,7 +373,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [px - 2, py]
+          shift: [3, py]
           rotate: 90
         params:
           designator: C
@@ -384,7 +384,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [px - 4, py]
+          shift: [1, py]
           rotate: 90
         params:
           designator: C
@@ -395,7 +395,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [px - 6, py]
+          shift: [-1, py]
           rotate: 90
         params:
           designator: C
@@ -406,7 +406,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [px - 8, py]
+          shift: [-3, py]
           rotate: 90
         params:
           designator: C
@@ -417,7 +417,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [px - 10, py]
+          shift: [-5, py]
           rotate: 90
         params:
           designator: C
@@ -428,7 +428,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [px - 6, py/2]
+          shift: [-1, py/2]
           rotate: 90
         params:
           designator: C
@@ -439,7 +439,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [px - 8, py/2]
+          shift: [-3, py/2]
           rotate: 90
         params:
           designator: C
@@ -450,7 +450,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [px - 10, py/2]
+          shift: [-5, py/2]
           rotate: 90
         params:
           designator: C
@@ -462,7 +462,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [px, py/2]
+          shift: [5, py/2]
           rotate: 90
         params:
           designator: C
@@ -473,7 +473,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [px - 2, py/2]
+          shift: [3, py/2]
           rotate: 90
         params:
           designator: C
@@ -484,7 +484,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [px - 4, py/2]
+          shift: [1, py/2]
           rotate: 90
         params:
           designator: C
