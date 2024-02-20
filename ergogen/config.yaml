@@ -234,7 +234,8 @@ pcbs:
           value: USBLC6-2SC6
           side: B
       
-      # === XC6206PxxxMR (flash memory)
+      # === XC6206PxxxMR (volatage regulator)
+      # part number: XC6206
       u4:
         what: placeholder
         where:
@@ -270,6 +271,7 @@ pcbs:
       
       # === Crystal Oscillator (Crystal_GND24_Small)   
       # 12MHz 3225 SMD 4 PIN
+      # part number: C9002
       y1: # 
         what: placeholder
         where:
@@ -315,6 +317,8 @@ pcbs:
           side: B
 
       # === buttons
+      # Alps SKQG
+      # part number: C318884
       sw1: # button: RESET
         what: placeholder
         where:
@@ -338,6 +342,19 @@ pcbs:
           value: SW_Push
           side: B
 
+      # === breakout
+      j3:
+        what: placeholder
+        where:
+          ref: matrix_pinky_home
+        adjust:
+          shift: [5, py]
+          rotate: 90
+        params:
+          designator: J
+          value: Conn_01x05
+          side: B  
+
       # === decoupling capcitors
       # +3V3
       c6:
@@ -345,7 +362,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [-px + 2, py]
+          shift: [px, py]
           rotate: 90
         params:
           designator: C
@@ -356,7 +373,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [-px + 4, py]
+          shift: [px - 2, py]
           rotate: 90
         params:
           designator: C
@@ -367,7 +384,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [-px + 6, py]
+          shift: [px - 4, py]
           rotate: 90
         params:
           designator: C
@@ -378,7 +395,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [-px + 8, py]
+          shift: [px - 6, py]
           rotate: 90
         params:
           designator: C
@@ -389,7 +406,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [-px + 10, py]
+          shift: [px - 8, py]
           rotate: 90
         params:
           designator: C
@@ -400,7 +417,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [-px + 12, py]
+          shift: [px - 10, py]
           rotate: 90
         params:
           designator: C
@@ -411,7 +428,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [-px + 14, py]
+          shift: [px - 6, py/2]
           rotate: 90
         params:
           designator: C
@@ -422,7 +439,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [-px + 16, py]
+          shift: [px - 8, py/2]
           rotate: 90
         params:
           designator: C
@@ -433,7 +450,7 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [-px + 18, py]
+          shift: [px - 10, py/2]
           rotate: 90
         params:
           designator: C
@@ -443,9 +460,9 @@ pcbs:
       c15:
         what: placeholder
         where:
-          ref: matrix_pinky_top
+          ref: matrix_ring_top
         adjust:
-          shift: [px/2, py]
+          shift: [px, py/2]
           rotate: 90
         params:
           designator: C
@@ -454,9 +471,9 @@ pcbs:
       c16:
         what: placeholder
         where:
-          ref: matrix_pinky_top
+          ref: matrix_ring_top
         adjust:
-          shift: [px/2 + 2, py]
+          shift: [px - 2, py/2]
           rotate: 90
         params:
           designator: C
@@ -465,15 +482,14 @@ pcbs:
       c17:
         what: placeholder
         where:
-          ref: matrix_pinky_top
+          ref: matrix_ring_top
         adjust:
-          shift: [px/2 + 4, py]
+          shift: [px - 4, py/2]
           rotate: 90
         params:
           designator: C
           value: 100nF
           side: B
-
       
       # === logos and text
       oshw: # make sure to uncheck "exclude from board" in schematic
@@ -505,7 +521,7 @@ pcbs:
           side: B
           justify: mirror
           knockout: true
-          face: "JetBrainsMono NF"
+          # face: "JetBrainsMono NF"
       version_text:
         what: text 
         where:
@@ -516,4 +532,4 @@ pcbs:
           side: B
           justify: mirror
           knockout: true
-          face: "JetBrainsMono NF"
+          # face: "JetBrainsMono NF"
