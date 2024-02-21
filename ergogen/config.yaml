@@ -175,41 +175,6 @@ pcbs:
           designator: U
           value: USBLC6-2SC6
           side: B
-
-      # === W25Q128JVS (FLASH 128MB)
-      u3:
-        what: placeholder
-        where:
-          ref: matrix_pinky_top
-        adjust:
-          shift: [2, 3py/2 - 1]
-          rotate: 270
-        params:
-          designator: U
-          value: XC6206PxxxMR
-          side: B
-      r3:
-        what: placeholder
-        where:
-          ref: matrix_pinky_top
-        adjust:
-          shift: [1, py - 2]
-          rotate: 90
-        params:
-          designator: R
-          value: 1k
-          side: B
-      c3:
-        what: placeholder
-        where:
-          ref: matrix_pinky_top
-        adjust:
-          shift: [0, py - 2]
-          rotate: 90
-        params:
-          designator: C
-          value: 100nF
-          side: B
       
       # === Crystal Oscillator (Crystal_GND24_Small)   
       # 12MHz 3225 SMD 4 PIN
@@ -224,7 +189,7 @@ pcbs:
           designator: Y
           value: 12MHz
           side: B
-      r4:
+      r3:
         what: placeholder
         where:
           ref: matrix_ring_top
@@ -235,7 +200,7 @@ pcbs:
           designator: R
           value: 1k
           side: B
-      c4:
+      c3:
         what: placeholder
         where:
           ref: matrix_ring_top
@@ -246,7 +211,7 @@ pcbs:
           designator: C
           value: 22pF
           side: B
-      c5:
+      c4:
         what: placeholder
         where:
           ref: matrix_ring_top
@@ -259,7 +224,7 @@ pcbs:
           side: B
 
       # === RP2040
-      u4:
+      u3:
         what: placeholder
         where:
           ref: matrix_ring_top
@@ -270,13 +235,24 @@ pcbs:
           designator: U
           value: RP2040
           side: B
+      r4: # 1k
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [px, 3py/2 + 1]
+          rotate: 0
+        params:
+          designator: R
+          value: 27R
+          side: B
       r5: # 27R
         what: placeholder
         where:
-          ref: matrix_pinky_top
+          ref: matrix_ring_top
         adjust:
-          shift: [-px/2 - 1, py]
-          rotate: 90
+          shift: [px, 3py/2]
+          rotate: 0
         params:
           designator: R
           value: 27R
@@ -284,24 +260,48 @@ pcbs:
       r6: # 27R
         what: placeholder
         where:
-          ref: matrix_pinky_top
-        adjust:
-          shift: [-px/2, py]
-          rotate: 90
-        params:
-          designator: R
-          value: 27R
-          side: B
-      r7: # 1k
-        what: placeholder
-        where:
           ref: matrix_ring_top
         adjust:
-          shift: [-px/2 - 1, 5py/4]
+          shift: [px, 3py/2 - 1]
           rotate: 0
         params:
           designator: R
           value: 1k
+          side: B
+
+      # === W25Q128JVS (FLASH 128MB)
+      u4:
+        what: placeholder
+        where:
+          ref: matrix_middle_top
+        adjust:
+          shift: [0, 3py/2 - 1]
+          rotate: 270
+        params:
+          designator: U
+          value: XC6206PxxxMR
+          side: B
+      r7:
+        what: placeholder
+        where:
+          ref: matrix_middle_top
+        adjust:
+          shift: [-5, py]
+          rotate: 90
+        params:
+          designator: R
+          value: 1k
+          side: B
+      c5:
+        what: placeholder
+        where:
+          ref: matrix_middle_top
+        adjust:
+          shift: [-4, py]
+          rotate: 90
+        params:
+          designator: C
+          value: 100nF
           side: B
 
       # === buttons
