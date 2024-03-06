@@ -10,12 +10,12 @@ units:
   ky: U
   px: kx/2
   py: ky/2
-  dx: -0.4kx
+  dx: 0.425kx
   dy: 0
   dr: 270
   vx: 0
   vy: py/2
-  topy: ky
+  topy: 3ky/4
   usbx: 0
   usby: topy - 2.2
 
@@ -84,8 +84,8 @@ pcbs:
           value: 1N4148W
           side: B
 
-      # === USB C receptacle (host)
-      j1: # usb c receptacle (host)
+      # === USB C receptacle (left)
+      j1:
         what: placeholder
         where:
           ref: matrix_outer_top
@@ -98,10 +98,10 @@ pcbs:
       f1: # polyfuse 500mA
         what: placeholder
         where:
-          ref: matrix_pinky_top
+          ref: matrix_outer_top
         adjust:
-          shift: [-px - 1, py]
-          rotate: 90
+          shift: [px, py]
+          rotate: 0
         params:
           designator: F
           value: 500mA
@@ -111,8 +111,8 @@ pcbs:
         where:
           ref: matrix_outer_top
         adjust:
-          shift: [-px/2, py]
-          rotate: 90
+          shift: [px, py + 1]
+          rotate: 0
         params:
           designator: R
           value: 5k1
@@ -122,230 +122,62 @@ pcbs:
         where:
           ref: matrix_outer_top
         adjust:
-          shift: [-px/2 - 1, py]
-          rotate: 90
+          shift: [px, py + 2]
+          rotate: 0
         params:
           designator: R
           value: 5k1
           side: B
-      
-      # === XC6206PxxxMR (volatage regulator)
-      # part number: XC6206
-      u1: 
+
+      # === CH552T
+      u1:
         what: placeholder
         where:
-          ref: matrix_pinky_top
+          ref: matrix_ring_top
         adjust:
-          shift: [-px, 3py/2]
-          rotate: 270
+          shift: [0, py]
+          rotate: 0
         params:
           designator: U
-          value: W25Q128JVS
+          value: CH552T
           side: B
-      c1:
+      c1: # 100n
         what: placeholder
         where:
-          ref: matrix_pinky_top
+          ref: matrix_ring_top
         adjust:
-          shift: [-px, py]
-          rotate: 270
+          shift: [6, 7]
+          rotate: 0
         params:
           designator: C
-          value: 1uF
+          value: 100n
           side: B
-      c2:
+      c2: # 100n
         what: placeholder
         where:
-          ref: matrix_pinky_top
+          ref: matrix_ring_top
         adjust:
-          shift: [-px + 1, py]
-          rotate: 270
+          shift: [6, 6]
+          rotate: 0
         params:
           designator: C
-          value: 1uF
+          value: 100n
           side: B
 
       # === USBLC6-2SC6 (transient voltage suppressor)
       u2: 
         what: placeholder
         where:
-          ref: matrix_pinky_top
+          ref: matrix_ring_top
         adjust:
-          shift: [-px/2, 3py/2]
+          shift: [px, py]
           rotate: 90
         params:
           designator: U
           value: USBLC6-2SC6
           side: B
 
-      # === CH552T
-      u3:
-        what: placeholder
-        where:
-          ref: matrix_ring_top
-        adjust:
-          shift: [0, py + 4]
-          rotate: 0
-        params:
-          designator: U
-          value: CH552T
-          side: B
-      
-      # # === Crystal Oscillator (Crystal_GND24_Small)   
-      # # 12MHz 3225 SMD 4 PIN
-      # # part number: C9002
-      # y1: # 
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [-px, 3py/2]
-      #   params:
-      #     designator: Y
-      #     value: 12MHz
-      #     side: B
-      # r3:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [-px + 1, py]
-      #     rotate: 90
-      #   params:
-      #     designator: R
-      #     value: 1k
-      #     side: B
-      # c3:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [-px, py]
-      #     rotate: 90
-      #   params:
-      #     designator: C
-      #     value: 22pF
-      #     side: B
-      # c4:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [-px - 1, py]
-      #     rotate: 90
-      #   params:
-      #     designator: C
-      #     value: 22pF
-      #     side: B
-
-      # # === RP2040
-      # u3:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [0, py + 4]
-      #     rotate: 90
-      #   params:
-      #     designator: U
-      #     value: RP2040
-      #     side: B
-      # r4: # 1k
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [px, 3py/2 + 1]
-      #     rotate: 0
-      #   params:
-      #     designator: R
-      #     value: 27R
-      #     side: B
-      # r5: # 27R
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [px, 3py/2]
-      #     rotate: 0
-      #   params:
-      #     designator: R
-      #     value: 27R
-      #     side: B
-      # r6: # 27R
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [px, 3py/2 - 1]
-      #     rotate: 0
-      #   params:
-      #     designator: R
-      #     value: 1k
-      #     side: B
-
-      # # === W25Q128JVS (FLASH 128MB)
-      # u4:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_middle_top
-      #   adjust:
-      #     shift: [0, 3py/2 - 1]
-      #     rotate: 270
-      #   params:
-      #     designator: U
-      #     value: XC6206PxxxMR
-      #     side: B
-      # r7:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_middle_top
-      #   adjust:
-      #     shift: [-5, py]
-      #     rotate: 90
-      #   params:
-      #     designator: R
-      #     value: 1k
-      #     side: B
-      # c5:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_middle_top
-      #   adjust:
-      #     shift: [-4, py]
-      #     rotate: 90
-      #   params:
-      #     designator: C
-      #     value: 100nF
-      #     side: B
-
-      # # === buttons
-      # # Alps SKQG
-      # # part number: C318884
-      # sw1: # button: RESET
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_outer_home
-      #   adjust:
-      #     shift: [0, 8]
-      #     rotate: 0
-      #   params:
-      #     designator: SW
-      #     value: SW_Push
-      #     side: B
-      # sw2: # button: BOOT
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_pinky_home
-      #   adjust:
-      #     shift: [0, 8]
-      #     rotate: 0
-      #   params:
-      #     designator: SW
-      #     value: SW_Push
-      #     side: B
-
-      # === USB C receptacle (peripheral)
+      # === USB C receptacle (right)
       j2: 
         what: placeholder
         where:
@@ -356,142 +188,39 @@ pcbs:
           designator: J
           value: USB_C_Receptacle
           side: B 
-
-      # === decoupling capcitors
-      # +3V3
-      # c6:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [5, py]
-      #     rotate: 90
-      #   params:
-      #     designator: C
-      #     value: 10uF
-      #     side: B
-      # c7:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [3, py]
-      #     rotate: 90
-      #   params:
-      #     designator: C
-      #     value: 1uF
-      #     side: B
-      # c8:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [1, py]
-      #     rotate: 90
-      #   params:
-      #     designator: C
-      #     value: 100nF
-      #     side: B
-      # c9:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [-1, py]
-      #     rotate: 90
-      #   params:
-      #     designator: C
-      #     value: 100nF
-      #     side: B
-      # c10:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [-3, py]
-      #     rotate: 90
-      #   params:
-      #     designator: C
-      #     value: 100nF
-      #     side: B
-      # c11:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [-5, py]
-      #     rotate: 90
-      #   params:
-      #     designator: C
-      #     value: 100nF
-      #     side: B
-      # c12:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [-1, py/2]
-      #     rotate: 90
-      #   params:
-      #     designator: C
-      #     value: 100nF
-      #     side: B
-      # c13:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [-3, py/2]
-      #     rotate: 90
-      #   params:
-      #     designator: C
-      #     value: 100nF
-      #     side: B
-      # c14:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [-5, py/2]
-      #     rotate: 90
-      #   params:
-      #     designator: C
-      #     value: 100nF
-      #     side: B
-      # # +1V1
-      # c15:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [5, py/2]
-      #     rotate: 90
-      #   params:
-      #     designator: C
-      #     value: 1uF
-      #     side: B
-      # c16:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [3, py/2]
-      #     rotate: 90
-      #   params:
-      #     designator: C
-      #     value: 100nF
-      #     side: B
-      # c17:
-      #   what: placeholder
-      #   where:
-      #     ref: matrix_ring_top
-      #   adjust:
-      #     shift: [1, py/2]
-      #     rotate: 90
-      #   params:
-      #     designator: C
-      #     value: 100nF
-      #     side: B
+      f2: # polyfuse 500mA
+        what: placeholder
+        where:
+          ref: matrix_inner_top
+        adjust:
+          shift: [-px, py]
+          rotate: 0
+        params:
+          designator: F
+          value: 500mA
+          side: B
+      r3: # 5k1
+        what: placeholder
+        where:
+          ref: matrix_inner_top
+        adjust:
+          shift: [-px, py + 1]
+          rotate: 0
+        params:
+          designator: R
+          value: 5k1
+          side: B
+      r4: # 5k1
+        what: placeholder
+        where:
+          ref: matrix_inner_top
+        adjust:
+          shift: [-px, py + 2]
+          rotate: 0
+        params:
+          designator: R
+          value: 5k1
+          side: B
       
       # === logos and text
       version_text:
@@ -522,12 +251,3 @@ pcbs:
         params:
           text: JLCJLCJLCJLC
           side: F
-      side_text:
-        what: text 
-        where:
-          ref: matrix_index_mods
-          shift: [px, py]
-        params:
-          text: left
-          side: B
-          justify: mirror

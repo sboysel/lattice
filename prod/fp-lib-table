@@ -2,4 +2,6 @@
   (version 7)
   (lib (name "project")(type "KiCad")(uri "/Users/sboysel/repos/lattice/lib/lattice.pretty")(options "")(descr ""))
   (lib (name "siderakb/key-switches")(type "KiCad")(uri "/Users/sboysel/repos/lattice/lib/key-switches.pretty")(options "")(descr ""))
+  (lib (name "marbastlib-choc")(type "KiCad")(uri "/Users/sboysel/repos/lattice/lib/marbastlib/footprints/marbastlib-choc.pretty")(options "")(descr ""))
+  (lib (name "marbastlib-mx")(type "KiCad")(uri "/Users/sboysel/repos/lattice/lib/marbastlib/footprints/marbastlib-mx.pretty")(options "")(descr ""))
 )

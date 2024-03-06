@@ -6,4 +6,5 @@
   (lib (name "marbastlib-mx")(type "KiCad")(uri "/Users/sboysel/repos/lattice/lib/marbastlib/symbols/marbastlib-mx.kicad_sym")(options "")(descr ""))
   (lib (name "marbastlib-choc")(type "KiCad")(uri "/Users/sboysel/repos/lattice/lib/marbastlib/symbols/marbastlib-choc.kicad_sym")(options "")(descr ""))
   (lib (name "rgoulter")(type "KiCad")(uri "/Users/sboysel/repos/lattice/lib/ProjectLocal.kicad_sym")(options "")(descr ""))
+  (lib (name "lattice")(type "KiCad")(uri "/Users/sboysel/repos/lattice/lib/lattice.kicad_sym")(options "")(descr ""))
 )
