@@ -4,7 +4,7 @@
 
   (page A4)
   (title_block
-    (title lattice_left)
+    (title lattice)
     (rev 2024.03)
     (company sboysel)
   )
@@ -108,7 +108,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 95.25 114.3 0)
+            (at 95.25 114.3 180)
             (fp_text reference "MX1" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -119,7 +119,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 95.25 95.25 0)
+            (at 95.25 95.25 180)
             (fp_text reference "MX2" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -130,7 +130,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 95.25 76.2 0)
+            (at 95.25 76.2 180)
             (fp_text reference "MX3" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -141,7 +141,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 95.25 57.150000000000006 0)
+            (at 95.25 57.150000000000006 180)
             (fp_text reference "MX4" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -152,7 +152,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 114.3 114.3 0)
+            (at 114.3 114.3 180)
             (fp_text reference "MX5" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -163,7 +163,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 114.3 95.25 0)
+            (at 114.3 95.25 180)
             (fp_text reference "MX6" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -174,7 +174,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 114.3 76.2 0)
+            (at 114.3 76.2 180)
             (fp_text reference "MX7" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -185,7 +185,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 114.3 57.150000000000006 0)
+            (at 114.3 57.150000000000006 180)
             (fp_text reference "MX8" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -196,7 +196,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 133.35 114.3 0)
+            (at 133.35 114.3 180)
             (fp_text reference "MX9" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -207,7 +207,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 133.35 95.25 0)
+            (at 133.35 95.25 180)
             (fp_text reference "MX10" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -218,7 +218,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 133.35 76.2 0)
+            (at 133.35 76.2 180)
             (fp_text reference "MX11" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -229,7 +229,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 133.35 57.150000000000006 0)
+            (at 133.35 57.150000000000006 180)
             (fp_text reference "MX12" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -240,7 +240,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 152.4 114.3 0)
+            (at 152.4 114.3 180)
             (fp_text reference "MX13" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -251,7 +251,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 152.4 95.25 0)
+            (at 152.4 95.25 180)
             (fp_text reference "MX14" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -262,7 +262,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 152.4 76.2 0)
+            (at 152.4 76.2 180)
             (fp_text reference "MX15" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -273,7 +273,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 152.4 57.150000000000006 0)
+            (at 152.4 57.150000000000006 180)
             (fp_text reference "MX16" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -284,7 +284,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 171.45 114.3 0)
+            (at 171.45 114.3 180)
             (fp_text reference "MX17" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -295,7 +295,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 171.45 95.25 0)
+            (at 171.45 95.25 180)
             (fp_text reference "MX18" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -306,7 +306,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 171.45 76.2 0)
+            (at 171.45 76.2 180)
             (fp_text reference "MX19" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -317,7 +317,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 171.45 57.150000000000006 0)
+            (at 171.45 57.150000000000006 180)
             (fp_text reference "MX20" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -328,7 +328,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 190.5 114.3 0)
+            (at 190.5 114.3 180)
             (fp_text reference "MX21" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -339,7 +339,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 190.5 95.25 0)
+            (at 190.5 95.25 180)
             (fp_text reference "MX22" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -350,7 +350,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 190.5 76.2 0)
+            (at 190.5 76.2 180)
             (fp_text reference "MX23" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -361,7 +361,7 @@
     
         (module MX_SW_HS (layer B.Cu)
 
-            (at 190.5 57.150000000000006 0)
+            (at 190.5 57.150000000000006 180)
             (fp_text reference "MX24" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
@@ -726,61 +726,6 @@
 
             (at 133.35 43.62500000000001 90)
             (fp_text reference "U3" (at 0 0 0) (layer "B.Fab")
-              (effects (font (size 1 1) (thickness 0.15)))
-            )
-        )
-    
-        
-
-    
-        (module XC6206PxxxMR (layer B.Cu)
-
-            (at 152.4 43.862500000000004 270)
-            (fp_text reference "U4" (at 0 0 0) (layer "B.Fab")
-              (effects (font (size 1 1) (thickness 0.15)))
-            )
-        )
-    
-        
-
-    
-        (module 1k (layer B.Cu)
-
-            (at 147.4 47.62500000000001 90)
-            (fp_text reference "R3" (at 0 0 0) (layer "B.Fab")
-              (effects (font (size 1 1) (thickness 0.15)))
-            )
-        )
-    
-        
-
-    
-        (module 100nF (layer B.Cu)
-
-            (at 148.4 47.62500000000001 90)
-            (fp_text reference "C3" (at 0 0 0) (layer "B.Fab")
-              (effects (font (size 1 1) (thickness 0.15)))
-            )
-        )
-    
-        
-
-    
-        (module SW_Push (layer B.Cu)
-
-            (at 95.25 68.2 0)
-            (fp_text reference "SW1" (at 0 0 0) (layer "B.Fab")
-              (effects (font (size 1 1) (thickness 0.15)))
-            )
-        )
-    
-        
-
-    
-        (module SW_Push (layer B.Cu)
-
-            (at 114.3 68.2 0)
-            (fp_text reference "SW2" (at 0 0 0) (layer "B.Fab")
               (effects (font (size 1 1) (thickness 0.15)))
             )
         )

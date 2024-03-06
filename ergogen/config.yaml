@@ -1,7 +1,7 @@
 meta:
   engine: 4.0.5
   name: lattice
-  version: 2024.02
+  version: 2024.03
   author: sboysel
   url: https://github.com/sboysel/lattice
 
@@ -55,16 +55,18 @@ outlines:
       fillet: 3
 
 pcbs:
-  lattice_left:
+  lattice:
     outlines:
       main:
         outline: pcb
         footprints:
     footprints:
-      # === Switches (Cherry MX hotswap)
+      # === Switches (Gateron Low Profile ks-27 / hotswap)
       mx:
         what: placeholder
         where: true
+        adjust:
+          rotate: 180
         params:
           designator: MX
           value: MX_SW_HS
@@ -175,160 +177,173 @@ pcbs:
           designator: U
           value: USBLC6-2SC6
           side: B
-      
-      # === Crystal Oscillator (Crystal_GND24_Small)   
-      # 12MHz 3225 SMD 4 PIN
-      # part number: C9002
-      y1: # 
-        what: placeholder
-        where:
-          ref: matrix_ring_top
-        adjust:
-          shift: [-px, 3py/2]
-        params:
-          designator: Y
-          value: 12MHz
-          side: B
-      r3:
-        what: placeholder
-        where:
-          ref: matrix_ring_top
-        adjust:
-          shift: [-px + 1, py]
-          rotate: 90
-        params:
-          designator: R
-          value: 1k
-          side: B
-      c3:
-        what: placeholder
-        where:
-          ref: matrix_ring_top
-        adjust:
-          shift: [-px, py]
-          rotate: 90
-        params:
-          designator: C
-          value: 22pF
-          side: B
-      c4:
-        what: placeholder
-        where:
-          ref: matrix_ring_top
-        adjust:
-          shift: [-px - 1, py]
-          rotate: 90
-        params:
-          designator: C
-          value: 22pF
-          side: B
 
-      # === RP2040
+      # === CH552T
       u3:
         what: placeholder
         where:
           ref: matrix_ring_top
         adjust:
           shift: [0, py + 4]
-          rotate: 90
+          rotate: 0
         params:
           designator: U
-          value: RP2040
+          value: CH552T
           side: B
-      r4: # 1k
-        what: placeholder
-        where:
-          ref: matrix_ring_top
-        adjust:
-          shift: [px, 3py/2 + 1]
-          rotate: 0
-        params:
-          designator: R
-          value: 27R
-          side: B
-      r5: # 27R
-        what: placeholder
-        where:
-          ref: matrix_ring_top
-        adjust:
-          shift: [px, 3py/2]
-          rotate: 0
-        params:
-          designator: R
-          value: 27R
-          side: B
-      r6: # 27R
-        what: placeholder
-        where:
-          ref: matrix_ring_top
-        adjust:
-          shift: [px, 3py/2 - 1]
-          rotate: 0
-        params:
-          designator: R
-          value: 1k
-          side: B
+      
+      # # === Crystal Oscillator (Crystal_GND24_Small)   
+      # # 12MHz 3225 SMD 4 PIN
+      # # part number: C9002
+      # y1: # 
+      #   what: placeholder
+      #   where:
+      #     ref: matrix_ring_top
+      #   adjust:
+      #     shift: [-px, 3py/2]
+      #   params:
+      #     designator: Y
+      #     value: 12MHz
+      #     side: B
+      # r3:
+      #   what: placeholder
+      #   where:
+      #     ref: matrix_ring_top
+      #   adjust:
+      #     shift: [-px + 1, py]
+      #     rotate: 90
+      #   params:
+      #     designator: R
+      #     value: 1k
+      #     side: B
+      # c3:
+      #   what: placeholder
+      #   where:
+      #     ref: matrix_ring_top
+      #   adjust:
+      #     shift: [-px, py]
+      #     rotate: 90
+      #   params:
+      #     designator: C
+      #     value: 22pF
+      #     side: B
+      # c4:
+      #   what: placeholder
+      #   where:
+      #     ref: matrix_ring_top
+      #   adjust:
+      #     shift: [-px - 1, py]
+      #     rotate: 90
+      #   params:
+      #     designator: C
+      #     value: 22pF
+      #     side: B
 
-      # === W25Q128JVS (FLASH 128MB)
-      u4:
-        what: placeholder
-        where:
-          ref: matrix_middle_top
-        adjust:
-          shift: [0, 3py/2 - 1]
-          rotate: 270
-        params:
-          designator: U
-          value: XC6206PxxxMR
-          side: B
-      r7:
-        what: placeholder
-        where:
-          ref: matrix_middle_top
-        adjust:
-          shift: [-5, py]
-          rotate: 90
-        params:
-          designator: R
-          value: 1k
-          side: B
-      c5:
-        what: placeholder
-        where:
-          ref: matrix_middle_top
-        adjust:
-          shift: [-4, py]
-          rotate: 90
-        params:
-          designator: C
-          value: 100nF
-          side: B
+      # # === RP2040
+      # u3:
+      #   what: placeholder
+      #   where:
+      #     ref: matrix_ring_top
+      #   adjust:
+      #     shift: [0, py + 4]
+      #     rotate: 90
+      #   params:
+      #     designator: U
+      #     value: RP2040
+      #     side: B
+      # r4: # 1k
+      #   what: placeholder
+      #   where:
+      #     ref: matrix_ring_top
+      #   adjust:
+      #     shift: [px, 3py/2 + 1]
+      #     rotate: 0
+      #   params:
+      #     designator: R
+      #     value: 27R
+      #     side: B
+      # r5: # 27R
+      #   what: placeholder
+      #   where:
+      #     ref: matrix_ring_top
+      #   adjust:
+      #     shift: [px, 3py/2]
+      #     rotate: 0
+      #   params:
+      #     designator: R
+      #     value: 27R
+      #     side: B
+      # r6: # 27R
+      #   what: placeholder
+      #   where:
+      #     ref: matrix_ring_top
+      #   adjust:
+      #     shift: [px, 3py/2 - 1]
+      #     rotate: 0
+      #   params:
+      #     designator: R
+      #     value: 1k
+      #     side: B
 
-      # === buttons
-      # Alps SKQG
-      # part number: C318884
-      sw1: # button: RESET
-        what: placeholder
-        where:
-          ref: matrix_outer_home
-        adjust:
-          shift: [0, 8]
-          rotate: 0
-        params:
-          designator: SW
-          value: SW_Push
-          side: B
-      sw2: # button: BOOT
-        what: placeholder
-        where:
-          ref: matrix_pinky_home
-        adjust:
-          shift: [0, 8]
-          rotate: 0
-        params:
-          designator: SW
-          value: SW_Push
-          side: B
+      # # === W25Q128JVS (FLASH 128MB)
+      # u4:
+      #   what: placeholder
+      #   where:
+      #     ref: matrix_middle_top
+      #   adjust:
+      #     shift: [0, 3py/2 - 1]
+      #     rotate: 270
+      #   params:
+      #     designator: U
+      #     value: XC6206PxxxMR
+      #     side: B
+      # r7:
+      #   what: placeholder
+      #   where:
+      #     ref: matrix_middle_top
+      #   adjust:
+      #     shift: [-5, py]
+      #     rotate: 90
+      #   params:
+      #     designator: R
+      #     value: 1k
+      #     side: B
+      # c5:
+      #   what: placeholder
+      #   where:
+      #     ref: matrix_middle_top
+      #   adjust:
+      #     shift: [-4, py]
+      #     rotate: 90
+      #   params:
+      #     designator: C
+      #     value: 100nF
+      #     side: B
+
+      # # === buttons
+      # # Alps SKQG
+      # # part number: C318884
+      # sw1: # button: RESET
+      #   what: placeholder
+      #   where:
+      #     ref: matrix_outer_home
+      #   adjust:
+      #     shift: [0, 8]
+      #     rotate: 0
+      #   params:
+      #     designator: SW
+      #     value: SW_Push
+      #     side: B
+      # sw2: # button: BOOT
+      #   what: placeholder
+      #   where:
+      #     ref: matrix_pinky_home
+      #   adjust:
+      #     shift: [0, 8]
+      #     rotate: 0
+      #   params:
+      #     designator: SW
+      #     value: SW_Push
+      #     side: B
 
       # === USB C receptacle (peripheral)
       j2: 
