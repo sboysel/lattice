@@ -69,4 +69,9 @@
     (solder_mask_margin 0.102) (tstamp 0a0bf46f-deb4-4230-8e97-24c31a71f5c2))
   (pad "6" smd rect (at 2.5 3.25 180) (size 1.2 1.5) (layers "F.Cu" "F.Paste" "F.Mask")
     (solder_mask_margin 0.102) (tstamp 2d341ce0-419b-4859-b728-f54e2261ee30))
+  (model "/Users/sboysel/repos/lattice/lib/lattice.3dmodels/wurth_452403012014.stp"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 180))
+  )
 )
