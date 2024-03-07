@@ -10,12 +10,12 @@ units:
   ky: U
   px: kx/2
   py: ky/2
-  dx: 0.425kx
+  dx: -8.25
   dy: 0
   dr: 270
   vx: 0
   vy: py/2
-  topy: 3ky/4
+  topy: py + ky/4
   usbx: 0
   usby: topy - 2.2
 
@@ -66,7 +66,7 @@ pcbs:
         what: placeholder
         where: true
         adjust:
-          rotate: 180
+          rotate: 0
         params:
           designator: MX
           value: MX_SW_HS
@@ -111,7 +111,7 @@ pcbs:
         where:
           ref: matrix_outer_top
         adjust:
-          shift: [px, py + 1]
+          shift: [px, py + 1.7]
           rotate: 0
         params:
           designator: R
@@ -122,11 +122,103 @@ pcbs:
         where:
           ref: matrix_outer_top
         adjust:
-          shift: [px, py + 2]
+          shift: [px, py + 3.4]
           rotate: 0
         params:
           designator: R
           value: 5k1
+          side: B
+
+      # === toggles
+      sw1:
+        what: placeholder
+        where:
+          ref: matrix_pinky_top
+        adjust:
+          shift: [0, py]
+          rotate: 0
+        params:
+          designator: SW
+          value: SW_Slide_DPDT
+          side: B
+      sw2:
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [px, py]
+          rotate: 0
+        params:
+          designator: SW
+          value: SW_Slide_DPDT
+          side: B
+      sw3:
+        what: placeholder
+        where:
+          ref: matrix_index_top
+        adjust:
+          shift: [0, py]
+          rotate: 0
+        params:
+          designator: SW
+          value: SW_Slide_DPDT
+          side: B
+
+      # === buttons
+      b1: # 
+        what: placeholder
+        where:
+          ref: matrix_ring_home
+        adjust:
+          shift: [0, 7]
+          rotate: 0
+        params:
+          designator: B
+          value: SW_SPST
+          side: B
+      r3: # 330R
+        what: placeholder
+        where:
+          ref: matrix_ring_home
+        adjust:
+          shift: [-7, 8.7]
+          rotate: 180
+        params:
+          designator: R
+          value: 330R
+          side: B
+      c1: # 100n
+        what: placeholder
+        where:
+          ref: matrix_ring_home
+        adjust:
+          shift: [-7, 7]
+          rotate: 0
+        params:
+          designator: C
+          value: 100n
+          side: B
+      b2:
+        what: placeholder
+        where:
+          ref: matrix_middle_home
+        adjust:
+          shift: [0, 7]
+          rotate: 0
+        params:
+          designator: B
+          value: SW_SPST
+          side: B
+      r4: # 10k
+        what: placeholder
+        where:
+          ref: matrix_middle_home
+        adjust:
+          shift: [7, 7]
+          rotate: 0
+        params:
+          designator: R
+          value: 10k
           side: B
 
       # === CH552T
@@ -135,29 +227,29 @@ pcbs:
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [0, py]
+          shift: [-px/2, py]
           rotate: 0
         params:
           designator: U
           value: CH552T
-          side: B
-      c1: # 100n
-        what: placeholder
-        where:
-          ref: matrix_ring_top
-        adjust:
-          shift: [6, 7]
-          rotate: 0
-        params:
-          designator: C
-          value: 100n
           side: B
       c2: # 100n
         what: placeholder
         where:
           ref: matrix_ring_top
         adjust:
-          shift: [6, 6]
+          shift: [1, 7.7]
+          rotate: 0
+        params:
+          designator: C
+          value: 100n
+          side: B
+      c3: # 100n
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [1, 6]
           rotate: 0
         params:
           designator: C
@@ -168,9 +260,9 @@ pcbs:
       u2: 
         what: placeholder
         where:
-          ref: matrix_ring_top
+          ref: matrix_middle_top
         adjust:
-          shift: [px, py]
+          shift: [px/2, py]
           rotate: 90
         params:
           designator: U
@@ -199,23 +291,23 @@ pcbs:
           designator: F
           value: 500mA
           side: B
-      r3: # 5k1
+      r5: # 5k1
         what: placeholder
         where:
           ref: matrix_inner_top
         adjust:
-          shift: [-px, py + 1]
+          shift: [-px, py + 1.7]
           rotate: 0
         params:
           designator: R
           value: 5k1
           side: B
-      r4: # 5k1
+      r6: # 5k1
         what: placeholder
         where:
           ref: matrix_inner_top
         adjust:
-          shift: [-px, py + 2]
+          shift: [-px, py + 3.4]
           rotate: 0
         params:
           designator: R
@@ -229,7 +321,7 @@ pcbs:
           ref: matrix_index_home
           shift: [px, py]
         params:
-          text: 'lattice v2024.02'
+          text: 'lattice v2024.03'
           side: B
           justify: mirror
       oshw: # make sure to uncheck "exclude from board" in schematic
