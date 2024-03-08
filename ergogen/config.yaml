@@ -84,6 +84,87 @@ pcbs:
           value: 1N4148W
           side: B
 
+      # === CH552T
+      u1:
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [-7, py]
+          rotate: 0
+        params:
+          designator: U
+          value: CH552T
+          side: B
+      c1: # 100n
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [0, 7]
+          rotate: 0
+        params:
+          designator: C
+          value: 100n
+          side: B
+      c2: # 100n
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [0, 5.5]
+          rotate: 0
+        params:
+          designator: C
+          value: 100n
+          side: B
+
+      # === TS3A44159PWR
+      u2:
+        what: placeholder
+        where:
+          ref: matrix_middle_top
+        adjust:
+          shift: [7, py]
+          rotate: 0
+        params:
+          designator: U
+          value: TS3A44159PWR
+          side: B
+      c3: # 0.1uF
+        what: placeholder
+        where:
+          ref: matrix_middle_top
+        adjust:
+          shift: [0, 7]
+          rotate: 0
+        params:
+          designator: C
+          value: 0.1uF
+          side: B
+      r5: # 10k
+        what: placeholder
+        where:
+          ref: matrix_middle_top
+        adjust:
+          shift: [0, 5.5]
+          rotate: 0
+        params:
+          designator: R
+          value: 10k
+          side: B
+      sw1: # toggle
+        what: placeholder
+        where:
+          ref: matrix_ring_top
+        adjust:
+          shift: [px, py + 2.675]
+          rotate: 0
+        params:
+          designator: SW
+          value: SW_SPDT
+          side: B
+
       # === USB C receptacle (left)
       j1:
         what: placeholder
@@ -129,141 +210,14 @@ pcbs:
           value: 5k1
           side: B
 
-      # === toggles
-      sw1:
+      # === USBLC6-2SC6 (transient voltage suppressor)
+      u3: # left 
         what: placeholder
         where:
           ref: matrix_pinky_top
         adjust:
           shift: [0, py]
           rotate: 0
-        params:
-          designator: SW
-          value: SW_Slide_DPDT
-          side: B
-      sw2:
-        what: placeholder
-        where:
-          ref: matrix_ring_top
-        adjust:
-          shift: [px, py]
-          rotate: 0
-        params:
-          designator: SW
-          value: SW_Slide_DPDT
-          side: B
-      sw3:
-        what: placeholder
-        where:
-          ref: matrix_index_top
-        adjust:
-          shift: [0, py]
-          rotate: 0
-        params:
-          designator: SW
-          value: SW_Slide_DPDT
-          side: B
-
-      # === buttons
-      b1: # 
-        what: placeholder
-        where:
-          ref: matrix_ring_home
-        adjust:
-          shift: [0, 7]
-          rotate: 0
-        params:
-          designator: B
-          value: SW_SPST
-          side: B
-      r3: # 330R
-        what: placeholder
-        where:
-          ref: matrix_ring_home
-        adjust:
-          shift: [-7, 8.5]
-          rotate: 180
-        params:
-          designator: R
-          value: 330R
-          side: B
-      c1: # 100n
-        what: placeholder
-        where:
-          ref: matrix_ring_home
-        adjust:
-          shift: [-7, 7]
-          rotate: 0
-        params:
-          designator: C
-          value: 100n
-          side: B
-      b2:
-        what: placeholder
-        where:
-          ref: matrix_middle_home
-        adjust:
-          shift: [0, 7]
-          rotate: 0
-        params:
-          designator: B
-          value: SW_SPST
-          side: B
-      r4: # 10k
-        what: placeholder
-        where:
-          ref: matrix_middle_home
-        adjust:
-          shift: [7, 7]
-          rotate: 0
-        params:
-          designator: R
-          value: 10k
-          side: B
-
-      # === CH552T
-      u1:
-        what: placeholder
-        where:
-          ref: matrix_ring_top
-        adjust:
-          shift: [-px/2, py]
-          rotate: 0
-        params:
-          designator: U
-          value: CH552T
-          side: B
-      c2: # 100n
-        what: placeholder
-        where:
-          ref: matrix_ring_top
-        adjust:
-          shift: [2, 7]
-          rotate: 0
-        params:
-          designator: C
-          value: 100n
-          side: B
-      c3: # 100n
-        what: placeholder
-        where:
-          ref: matrix_ring_top
-        adjust:
-          shift: [2, 5.5]
-          rotate: 0
-        params:
-          designator: C
-          value: 100n
-          side: B
-
-      # === USBLC6-2SC6 (transient voltage suppressor)
-      u2: 
-        what: placeholder
-        where:
-          ref: matrix_middle_top
-        adjust:
-          shift: [px/2, py]
-          rotate: 90
         params:
           designator: U
           value: USBLC6-2SC6
@@ -291,7 +245,7 @@ pcbs:
           designator: F
           value: 500mA
           side: B
-      r5: # 5k1
+      r3: # 5k1
         what: placeholder
         where:
           ref: matrix_inner_top
@@ -302,7 +256,7 @@ pcbs:
           designator: R
           value: 5k1
           side: B
-      r6: # 5k1
+      r4: # 5k1
         what: placeholder
         where:
           ref: matrix_inner_top
@@ -314,11 +268,81 @@ pcbs:
           value: 5k1
           side: B
       
+      # === USBLC6-2SC6 (transient voltage suppressor)
+      u4: # right
+        what: placeholder
+        where:
+          ref: matrix_index_top
+        adjust:
+          shift: [0, py]
+          rotate: 0
+        params:
+          designator: U
+          value: USBLC6-2SC6
+          side: B
+
+      # === buttons
+      b1: # 
+        what: placeholder
+        where:
+          ref: matrix_ring_home
+        adjust:
+          shift: [0, 7]
+          rotate: 0
+        params:
+          designator: B
+          value: SW_SPST
+          side: B
+      r6: # 330R
+        what: placeholder
+        where:
+          ref: matrix_ring_home
+        adjust:
+          shift: [-7, 8.5]
+          rotate: 180
+        params:
+          designator: R
+          value: 330R
+          side: B
+      c4: # 100n
+        what: placeholder
+        where:
+          ref: matrix_ring_home
+        adjust:
+          shift: [-7, 7]
+          rotate: 0
+        params:
+          designator: C
+          value: 100n
+          side: B
+      b2:
+        what: placeholder
+        where:
+          ref: matrix_middle_home
+        adjust:
+          shift: [0, 7]
+          rotate: 0
+        params:
+          designator: B
+          value: SW_SPST
+          side: B
+      r7: # 10k
+        what: placeholder
+        where:
+          ref: matrix_middle_home
+        adjust:
+          shift: [7, 7]
+          rotate: 0
+        params:
+          designator: R
+          value: 10k
+          side: B
+
       # === logos and text
       version_text:
         what: text 
         where:
-          ref: matrix_index_home
+          ref: matrix_outer_bottom
           shift: [px, py]
         params:
           text: 'lattice v2024.03'
