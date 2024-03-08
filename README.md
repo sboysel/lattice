@@ -12,8 +12,19 @@ https://www.lcsc.com/products/Analog-Switches-Multiplexers_618.html?Number%20of%
 
 C&K PCM12SMTR C221841
 
+# TODO
+
+- toggle sidedness
+- https://github.com/qmk/qmk_firmware/blob/master/docs/serial_driver.md#pin-configuration-2
+
 ## license
 
-CC BY-NC-SA 4.0
+![Static Badge](https://img.shields.io/badge/hardware-CERN_OHL_P-blue)
+![Static Badge](https://img.shields.io/badge/software-BSD_3_Clause-blue)
 
-[![licensebuttons by-nc-sa](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0)
+Copyright 2024 Sam Boysel
+
+Hardware: CERN-OHL-P. Software: BSD-3-Clause.
+
+
+
