@@ -23,7 +23,7 @@ points:
   zones:
     matrix:
       anchor:
-        shift: [5kx, -6ky]
+        shift: [7kx, -8ky]
       columns:
         outer:
         pinky:
@@ -197,7 +197,7 @@ pcbs:
           ref: matrix_inner_top
         adjust:
           shift: [-px, topy - 2]
-          rotate: 0
+          rotate: 180
         params:
           designator: F
           value: 500mA
@@ -208,7 +208,7 @@ pcbs:
           ref: matrix_inner_top
         adjust:
           shift: [-px, topy - 4]
-          rotate: 0
+          rotate: 180
         params:
           designator: R
           value: 5k1
@@ -219,7 +219,7 @@ pcbs:
           ref: matrix_inner_top
         adjust:
           shift: [-px, topy - 6]
-          rotate: 0
+          rotate: 180
         params:
           designator: R
           value: 5k1
@@ -329,26 +329,18 @@ pcbs:
           designator: JP
           value: SolderJumper_3_Open
           side: F
-      jumper_lhs_text:
-        what: text 
+      # TODO: add JumperLabels footprint
+      jp_labels:
+        what: placeholder
         where:
           ref: matrix_pinky_top
         adjust:
-          shift: [19.5, topy - 3]
+          shift: [10.25, topy - 4]
+          rotate: 0
         params:
-          text: "▲lhs"
+          designator: L
+          value: SolderJumperLabel
           side: F
-          knockout: true
-      jumper_rhs_text:
-        what: text 
-        where:
-          ref: matrix_pinky_top
-        adjust:
-          shift: [19.5, topy - 5.5]
-        params:
-          text: "▼rhs"
-          side: F
-          knockout: true
 
       # === logos and text
       oshw: # make sure to uncheck "exclude from board" in schematic
