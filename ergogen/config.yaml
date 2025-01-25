@@ -11,8 +11,8 @@ units:
   px: kx/2
   py: ky/2
   dx: 0
-  dy: -4.75
-  dr: 0
+  dy: 4.75
+  dr: 180
   vx: 0
   vy: py/2
   topy: ky
@@ -66,7 +66,7 @@ pcbs:
         what: placeholder
         where: true
         adjust:
-          rotate: 180
+          rotate: 0
         params:
           designator: K
           value: SW_choc_v1_1u
@@ -88,9 +88,9 @@ pcbs:
       u1:
         what: placeholder
         where:
-          ref: matrix_middle_top
+          ref: matrix_ring_top
         adjust:
-          shift: [0, topy - 4.5]
+          shift: [px, topy - 4.5]
           rotate: 90
         params:
           designator: U
@@ -101,8 +101,8 @@ pcbs:
         where:
           ref: matrix_middle_top
         adjust:
-          shift: [-px + 2, topy - 3]
-          rotate: 180
+          shift: [0, topy - 2]
+          rotate: 0
         params:
           designator: C
           value: 100n
@@ -112,8 +112,8 @@ pcbs:
         where:
           ref: matrix_middle_top
         adjust:
-          shift: [-px + 2, topy - 5]
-          rotate: 180
+          shift: [0, topy - 4]
+          rotate: 0
         params:
           designator: C
           value: 100n
@@ -173,7 +173,7 @@ pcbs:
           ref: matrix_pinky_top
         adjust:
           shift: [-2, topy - 4]
-          rotate: 0
+          rotate: 180
         params:
           designator: U
           value: USBLC6-2SC6
@@ -242,21 +242,21 @@ pcbs:
       b1:
         what: placeholder
         where:
-          ref: matrix_index_top
+          ref: matrix_middle_top
         adjust:
-          shift: [-px, topy - 4]
+          shift: [px, topy - 4]
           rotate: 0
         params:
           designator: B
-          value: Pad_1x02
+          value: SW_SPST_SKQG
           side: F
       r5: # 10k
         what: placeholder
         where:
-          ref: matrix_index_top
+          ref: matrix_middle_top
         adjust:
-          shift: [-px + 4, topy - 4]
-          rotate: 90
+          shift: [0, topy - 6]
+          rotate: 180
         params:
           designator: R
           value: 10k
@@ -329,21 +329,32 @@ pcbs:
           designator: JP
           value: SolderJumper_3_Open
           side: F
-
-      # === logos and text
-      version_text:
+      jumper_lhs_text:
         what: text 
         where:
-          ref: matrix_outer_bottom
-          shift: [px, py]
+          ref: matrix_pinky_top
+        adjust:
+          shift: [19.5, topy - 3]
         params:
-          text: 'lattice v2025.01'
-          side: B
-          justify: mirror
+          text: "▲lhs"
+          side: F
+          knockout: true
+      jumper_rhs_text:
+        what: text 
+        where:
+          ref: matrix_pinky_top
+        adjust:
+          shift: [19.5, topy - 5.5]
+        params:
+          text: "▼rhs"
+          side: F
+          knockout: true
+
+      # === logos and text
       oshw: # make sure to uncheck "exclude from board" in schematic
         what: placeholder 
         where:
-          ref: matrix_index_bottom
+          ref: matrix_index_mods
         adjust:
           shift: [px, py]
           rotate: 180
@@ -351,11 +362,21 @@ pcbs:
           designator: SYM
           value: Logo_Open_Hardware_Small
           side: B
+      version_text:
+        what: text 
+        where:
+          ref: matrix_outer_mods
+          shift: [px, py]
+        params:
+          text: 'lattice v2025.01'
+          side: B
+          justify: mirror
       jlc_text:
         what: text 
         where:
-          ref: matrix_index_mods
-          shift: [px, py]
+          ref: matrix_outer_mods
+          shift: [px, -py + 1]
         params:
           text: JLCJLCJLCJLC
-          side: F
+          side: B
+          justify: mirror

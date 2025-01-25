@@ -6,7 +6,7 @@
 	(descr "Through hole straight socket strip, 1x02, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
 	(tags "Through hole socket strip THT 1x02 2.54mm single row")
 	(property "Reference" "REF**"
-		(at 0 -4.1216 0)
+		(at -4.0908 -0.0508 90)
 		(layer "F.SilkS")
 		(uuid "2881dc49-d7d5-41a9-b337-cd6747c7e738")
 		(effects
@@ -17,7 +17,7 @@
 		)
 	)
 	(property "Value" "Pad_1x02_P2.54mm_tht_boot"
-		(at 0 3.9584 0)
+		(at 3.9892 -0.0508 90)
 		(layer "F.Fab")
 		(uuid "ce18cac6-88ed-431e-85b2-b3c16cbfba34")
 		(effects
@@ -28,7 +28,7 @@
 		)
 	)
 	(property "Footprint" ""
-		(at 0 -1.3516 0)
+		(at -1.3208 -0.0508 90)
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
@@ -40,7 +40,7 @@
 		)
 	)
 	(property "Datasheet" ""
-		(at 0 -1.3516 0)
+		(at -1.3208 -0.0508 90)
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
@@ -52,7 +52,7 @@
 		)
 	)
 	(property "Description" ""
-		(at 0 -1.3516 0)
+		(at -1.3208 -0.0508 90)
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
@@ -65,28 +65,8 @@
 	)
 	(attr through_hole)
 	(fp_line
-		(start -1.8 -3.1516)
-		(end 1.75 -3.1516)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-		(uuid "5dbb739d-2335-4647-bed9-8b46b789db4b")
-	)
-	(fp_line
-		(start -1.8 2.9484)
-		(end -1.8 -3.1516)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-		(uuid "9493949d-ee8a-4f4f-a6e2-f6a30098e96f")
-	)
-	(fp_line
-		(start 1.75 -3.1516)
-		(end 1.75 2.9484)
+		(start -3.1208 -1.8008)
+		(end 2.9792 -1.8008)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -95,8 +75,18 @@
 		(uuid "a66a88bd-df10-4a1d-bba5-f45cd878c75d")
 	)
 	(fp_line
-		(start 1.75 2.9484)
-		(end -1.8 2.9484)
+		(start -3.1208 1.7492)
+		(end -3.1208 -1.8008)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5dbb739d-2335-4647-bed9-8b46b789db4b")
+	)
+	(fp_line
+		(start 2.9792 -1.8008)
+		(end 2.9792 1.7492)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -104,8 +94,18 @@
 		(layer "F.CrtYd")
 		(uuid "b65fd27b-ffce-4733-8e19-cb7f1082f558")
 	)
+	(fp_line
+		(start 2.9792 1.7492)
+		(end -3.1208 1.7492)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "9493949d-ee8a-4f4f-a6e2-f6a30098e96f")
+	)
 	(fp_text user "boot"
-		(at 1.1684 -2.012 -90)
+		(at -1.9812 -1.2192 0)
 		(unlocked yes)
 		(layer "F.SilkS" knockout)
 		(uuid "77e93391-1448-4a78-831b-ffac14445f3d")
@@ -118,7 +118,7 @@
 		)
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0 -0.0816 90)
+		(at -0.0508 -0.0508 180)
 		(layer "F.Fab")
 		(uuid "a3f9f268-d99f-40c4-ba4a-2f0f0eb72682")
 		(effects
@@ -129,7 +129,7 @@
 		)
 	)
 	(pad "1" thru_hole roundrect
-		(at 0 -1.3516)
+		(at -1.3208 -0.0508 90)
 		(size 1.7 1.7)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
@@ -138,7 +138,7 @@
 		(uuid "19c4d9ff-242d-448a-931d-39411f00012d")
 	)
 	(pad "2" thru_hole oval
-		(at 0 1.1884)
+		(at 1.2192 -0.0508 90)
 		(size 1.7 1.7)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
