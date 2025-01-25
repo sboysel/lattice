@@ -1,0 +1,160 @@
+(footprint "Pad_1x02_P2.54mm_tht_boot"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Through hole straight socket strip, 1x02, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
+	(tags "Through hole socket strip THT 1x02 2.54mm single row")
+	(property "Reference" "REF**"
+		(at 0 -4.1216 0)
+		(layer "F.SilkS")
+		(uuid "2881dc49-d7d5-41a9-b337-cd6747c7e738")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Pad_1x02_P2.54mm_tht_boot"
+		(at 0 3.9584 0)
+		(layer "F.Fab")
+		(uuid "ce18cac6-88ed-431e-85b2-b3c16cbfba34")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 -1.3516 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1a4f2dc4-7896-4a4a-a9e1-70fb6dbb77f0")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 -1.3516 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9616eee7-bc13-439a-adf4-2d8e3fc02ab1")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 -1.3516 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "713c460c-4c6b-4dcc-9148-7fe4ac26f978")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -1.8 -3.1516)
+		(end 1.75 -3.1516)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5dbb739d-2335-4647-bed9-8b46b789db4b")
+	)
+	(fp_line
+		(start -1.8 2.9484)
+		(end -1.8 -3.1516)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "9493949d-ee8a-4f4f-a6e2-f6a30098e96f")
+	)
+	(fp_line
+		(start 1.75 -3.1516)
+		(end 1.75 2.9484)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a66a88bd-df10-4a1d-bba5-f45cd878c75d")
+	)
+	(fp_line
+		(start 1.75 2.9484)
+		(end -1.8 2.9484)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b65fd27b-ffce-4733-8e19-cb7f1082f558")
+	)
+	(fp_text user "boot"
+		(at 1.1684 -2.012 -90)
+		(unlocked yes)
+		(layer "F.SilkS" knockout)
+		(uuid "77e93391-1448-4a78-831b-ffac14445f3d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -0.0816 90)
+		(layer "F.Fab")
+		(uuid "a3f9f268-d99f-40c4-ba4a-2f0f0eb72682")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole roundrect
+		(at 0 -1.3516)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.1470588235)
+		(uuid "19c4d9ff-242d-448a-931d-39411f00012d")
+	)
+	(pad "2" thru_hole oval
+		(at 0 1.1884)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "0428fe51-746d-4a1c-9c9a-1850816326d6")
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x02_P2.54mm_Vertical.wrl"
+		(hide yes)
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

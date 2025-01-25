@@ -1,23 +1,23 @@
 meta:
   engine: 4.0.5
   name: lattice
-  version: 2024.03
+  version: 2025.01
   author: sboysel
   url: https://github.com/sboysel/lattice
 
 units:
-  kx: U
-  ky: U
+  kx: 17 # cfx
+  ky: 17
   px: kx/2
   py: ky/2
-  dx: -8.25
-  dy: 0
-  dr: 270
+  dx: 0
+  dy: -4.75
+  dr: 0
   vx: 0
   vy: py/2
-  topy: py + ky/4
+  topy: ky
   usbx: 0
-  usby: topy - 2.2
+  usby: topy - 2.25
 
 points:
   zones:
@@ -62,15 +62,15 @@ pcbs:
         footprints:
     footprints:
       # === Switches (Gateron Low Profile ks-27 / hotswap)
-      mx:
+      choc:
         what: placeholder
         where: true
         adjust:
-          rotate: 0
+          rotate: 180
         params:
-          designator: MX
-          value: MX_SW_HS
-          side: B
+          designator: K
+          value: SW_choc_v1_1u
+          side: F
 
       # === Diodes
       diode:
@@ -82,88 +82,43 @@ pcbs:
         params:
           designator: D
           value: 1N4148W
-          side: B
+          side: F
 
       # === CH552T
       u1:
         what: placeholder
         where:
-          ref: matrix_ring_top
+          ref: matrix_middle_top
         adjust:
-          shift: [-7, py]
-          rotate: 0
+          shift: [0, topy - 4.5]
+          rotate: 90
         params:
           designator: U
           value: CH552T
-          side: B
+          side: F
       c1: # 100n
         what: placeholder
         where:
-          ref: matrix_ring_top
+          ref: matrix_middle_top
         adjust:
-          shift: [0, 7]
-          rotate: 0
+          shift: [-px + 2, topy - 3]
+          rotate: 180
         params:
           designator: C
           value: 100n
-          side: B
+          side: F
       c2: # 100n
         what: placeholder
         where:
-          ref: matrix_ring_top
+          ref: matrix_middle_top
         adjust:
-          shift: [0, 5.5]
-          rotate: 0
+          shift: [-px + 2, topy - 5]
+          rotate: 180
         params:
           designator: C
           value: 100n
-          side: B
+          side: F
 
-      # === TS3A44159PWR
-      u2:
-        what: placeholder
-        where:
-          ref: matrix_middle_top
-        adjust:
-          shift: [7, py]
-          rotate: 0
-        params:
-          designator: U
-          value: TS3A44159PWR
-          side: B
-      c3: # 0.1uF
-        what: placeholder
-        where:
-          ref: matrix_middle_top
-        adjust:
-          shift: [0, 7]
-          rotate: 0
-        params:
-          designator: C
-          value: 0.1uF
-          side: B
-      r5: # 10k
-        what: placeholder
-        where:
-          ref: matrix_middle_top
-        adjust:
-          shift: [0, 5.5]
-          rotate: 0
-        params:
-          designator: R
-          value: 10k
-          side: B
-      sw1: # toggle
-        what: placeholder
-        where:
-          ref: matrix_ring_top
-        adjust:
-          shift: [px, py + 2.675]
-          rotate: 0
-        params:
-          designator: SW
-          value: SW_SPDT
-          side: B
 
       # === USB C receptacle (left)
       j1:
@@ -172,56 +127,57 @@ pcbs:
           ref: matrix_outer_top
         adjust:
           shift: [usbx, usby]
+          rotate: 180
         params:
           designator: J
           value: USB_C_Receptacle
-          side: B
+          side: F
       f1: # polyfuse 500mA
         what: placeholder
         where:
           ref: matrix_outer_top
         adjust:
-          shift: [px, py]
+          shift: [px, topy - 2]
           rotate: 0
         params:
           designator: F
           value: 500mA
-          side: B
+          side: F
       r1: # 5k1
         what: placeholder
         where:
           ref: matrix_outer_top
         adjust:
-          shift: [px, py + 1.5]
+          shift: [px, topy - 4]
           rotate: 0
         params:
           designator: R
           value: 5k1
-          side: B
+          side: F
       r2: # 5k1
         what: placeholder
         where:
           ref: matrix_outer_top
         adjust:
-          shift: [px, py + 3]
+          shift: [px, topy - 6]
           rotate: 0
         params:
           designator: R
           value: 5k1
-          side: B
+          side: F
 
       # === USBLC6-2SC6 (transient voltage suppressor)
-      u3: # left 
+      u2: # left 
         what: placeholder
         where:
           ref: matrix_pinky_top
         adjust:
-          shift: [0, py]
+          shift: [-2, topy - 4]
           rotate: 0
         params:
           designator: U
           value: USBLC6-2SC6
-          side: B
+          side: F
 
       # === USB C receptacle (right)
       j2: 
@@ -230,113 +186,149 @@ pcbs:
           ref: matrix_inner_top
         adjust:
           shift: [usbx, usby]
+          rotate: 180
         params:
           designator: J
           value: USB_C_Receptacle
-          side: B 
+          side: F
       f2: # polyfuse 500mA
         what: placeholder
         where:
           ref: matrix_inner_top
         adjust:
-          shift: [-px, py]
+          shift: [-px, topy - 2]
           rotate: 0
         params:
           designator: F
           value: 500mA
-          side: B
+          side: F
       r3: # 5k1
         what: placeholder
         where:
           ref: matrix_inner_top
         adjust:
-          shift: [-px, py + 1.5]
+          shift: [-px, topy - 4]
           rotate: 0
         params:
           designator: R
           value: 5k1
-          side: B
+          side: F
       r4: # 5k1
         what: placeholder
         where:
           ref: matrix_inner_top
         adjust:
-          shift: [-px, py + 3]
+          shift: [-px, topy - 6]
           rotate: 0
         params:
           designator: R
           value: 5k1
-          side: B
+          side: F
       
       # === USBLC6-2SC6 (transient voltage suppressor)
-      u4: # right
+      u3: # right
         what: placeholder
         where:
           ref: matrix_index_top
         adjust:
-          shift: [0, py]
+          shift: [2, topy - 4]
           rotate: 0
         params:
           designator: U
           value: USBLC6-2SC6
-          side: B
+          side: F
 
-      # === buttons
-      b1: # 
+      # === boot button
+      b1:
         what: placeholder
         where:
-          ref: matrix_ring_home
+          ref: matrix_index_top
         adjust:
-          shift: [0, 7]
+          shift: [-px, topy - 4]
           rotate: 0
         params:
           designator: B
-          value: SW_SPST
-          side: B
-      r6: # 330R
+          value: Pad_1x02
+          side: F
+      r5: # 10k
         what: placeholder
         where:
-          ref: matrix_ring_home
+          ref: matrix_index_top
         adjust:
-          shift: [-7, 8.5]
-          rotate: 180
-        params:
-          designator: R
-          value: 330R
-          side: B
-      c4: # 100n
-        what: placeholder
-        where:
-          ref: matrix_ring_home
-        adjust:
-          shift: [-7, 7]
-          rotate: 0
-        params:
-          designator: C
-          value: 100n
-          side: B
-      b2:
-        what: placeholder
-        where:
-          ref: matrix_middle_home
-        adjust:
-          shift: [0, 7]
-          rotate: 0
-        params:
-          designator: B
-          value: SW_SPST
-          side: B
-      r7: # 10k
-        what: placeholder
-        where:
-          ref: matrix_middle_home
-        adjust:
-          shift: [7, 7]
-          rotate: 0
+          shift: [-px + 4, topy - 4]
+          rotate: 90
         params:
           designator: R
           value: 10k
-          side: B
+          side: F
+
+      # === jumpers
+      jp1:
+        what: placeholder
+        where:
+          ref: matrix_pinky_top
+        adjust:
+          shift: [4, topy - 4]
+          rotate: 270
+        params:
+          designator: JP
+          value: SolderJumper_3_Open
+          side: F
+      jp2:
+        what: placeholder
+        where:
+          ref: matrix_pinky_top
+        adjust:
+          shift: [6.5, topy - 4]
+          rotate: 270
+        params:
+          designator: JP
+          value: SolderJumper_3_Open
+          side: F
+      jp3:
+        what: placeholder
+        where:
+          ref: matrix_pinky_top
+        adjust:
+          shift: [9, topy - 4]
+          rotate: 270
+        params:
+          designator: JP
+          value: SolderJumper_3_Open
+          side: F
+      jp4:
+        what: placeholder
+        where:
+          ref: matrix_pinky_top
+        adjust:
+          shift: [11.5, topy - 4]
+          rotate: 270
+        params:
+          designator: JP
+          value: SolderJumper_3_Open
+          side: F
+      jp5:
+        what: placeholder
+        where:
+          ref: matrix_pinky_top
+        adjust:
+          shift: [14, topy - 4]
+          rotate: 270
+        params:
+          designator: JP
+          value: SolderJumper_3_Open
+          side: F
+      jp6:
+        what: placeholder
+        where:
+          ref: matrix_pinky_top
+        adjust:
+          shift: [16.5, topy - 4]
+          rotate: 270
+        params:
+          designator: JP
+          value: SolderJumper_3_Open
+          side: F
 
       # === logos and text
       version_text:
@@ -345,7 +337,7 @@ pcbs:
           ref: matrix_outer_bottom
           shift: [px, py]
         params:
-          text: 'lattice v2024.03'
+          text: 'lattice v2025.01'
           side: B
           justify: mirror
       oshw: # make sure to uncheck "exclude from board" in schematic

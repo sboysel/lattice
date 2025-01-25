@@ -1,0 +1,297 @@
+(footprint "SW_choc_v1_1u"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Footprint for Kailh Choc style switches")
+	(property "Reference" "K14"
+		(at 0 2.75 180)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "9d11d28c-618a-467d-abb5-1d5f058954cd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SW_choc_v1_1u"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(uuid "dbdba998-1457-4f59-87d8-2c85a6fd0eb8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "marbastlib-choc:SW_choc_v1_1u"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3f5d0a76-1566-4db6-bcd8-578225fa392f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5a3f8a88-f4b2-49c8-a92c-6e531d947816")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fd773a48-0d28-4ecd-b588-179da8a28c6b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole exclude_from_pos_files)
+	(fp_rect
+		(start -2.5 -6.275)
+		(end 2.5 -3.125)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "ff8be10e-da75-46dd-ab3a-0aee1d265122")
+	)
+	(fp_rect
+		(start -8.25 -8.25)
+		(end 8.25 8.25)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Eco1.User")
+		(uuid "71bbf2a9-6b3d-4daa-a655-b06fdfa61117")
+	)
+	(fp_line
+		(start -6.95 6.45)
+		(end -6.95 -6.45)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Eco2.User")
+		(uuid "0ce979d0-d70d-46e0-9562-9c0a674ed964")
+	)
+	(fp_line
+		(start -6.45 -6.95)
+		(end 6.45 -6.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Eco2.User")
+		(uuid "e38bb8bb-4713-4f10-8cdd-22d4d5f2f6ef")
+	)
+	(fp_line
+		(start 6.45 6.95)
+		(end -6.45 6.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Eco2.User")
+		(uuid "d5af937a-f7d1-4f2f-888c-8b9a35b50eaa")
+	)
+	(fp_line
+		(start 6.95 -6.45)
+		(end 6.95 6.45)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Eco2.User")
+		(uuid "22335812-debf-42d3-9ba8-f4d8b905de99")
+	)
+	(fp_arc
+		(start -6.95 -6.45)
+		(mid -6.803553 -6.803553)
+		(end -6.45 -6.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Eco2.User")
+		(uuid "6257c116-eb70-473d-9818-3256d21d13fd")
+	)
+	(fp_arc
+		(start -6.45 6.95)
+		(mid -6.803553 6.803553)
+		(end -6.95 6.45)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Eco2.User")
+		(uuid "7ff21d6b-b0e9-4a3a-8777-4348a5bbdd8e")
+	)
+	(fp_arc
+		(start 6.45 -6.95)
+		(mid 6.803553 -6.803553)
+		(end 6.95 -6.45)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Eco2.User")
+		(uuid "d760e949-ad87-44e1-a2a1-90c978737c80")
+	)
+	(fp_arc
+		(start 6.95 6.45)
+		(mid 6.803553 6.803553)
+		(end 6.45 6.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Eco2.User")
+		(uuid "87910300-e5ec-4383-8027-0c5ee2597948")
+	)
+	(fp_line
+		(start -7 -7)
+		(end 7 -7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "67b1b972-e5c5-456e-8173-94076ee7c544")
+	)
+	(fp_line
+		(start -7 7)
+		(end -7 -7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "738bf4bb-370a-45af-ba9c-01691aee03ce")
+	)
+	(fp_line
+		(start 7 -7)
+		(end 7 7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "6b67496b-7491-42d9-9cde-eeddb7e96bb1")
+	)
+	(fp_line
+		(start 7 7)
+		(end -7 7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "65af9384-fb2f-464d-a11c-15918000d3e0")
+	)
+	(fp_text user "LED"
+		(at 0 -4.7 0)
+		(unlocked yes)
+		(layer "Cmts.User")
+		(uuid "ae99ca47-64b6-4931-bf09-a359593ce0ff")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "16.5x16.5 mm"
+		(at -5.4864 -6.9596 0)
+		(unlocked yes)
+		(layer "Eco1.User")
+		(uuid "1b9726aa-8e40-4f87-830b-e1fffc16ae5c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 1.5 0)
+		(layer "F.Fab")
+		(uuid "2484871e-cb83-4f0a-bda2-3b040866c97a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at -5.5 0 180)
+		(size 1.7 1.7)
+		(drill 1.7)
+		(layers "*.Cu" "*.Mask")
+		(uuid "75c8a5c4-1fb5-412c-a40c-89c7038a9a4f")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 0 180)
+		(size 3.4 3.4)
+		(drill 3.4)
+		(layers "*.Cu" "*.Mask")
+		(uuid "ac5f135b-aab3-4827-8228-e4cf09f40899")
+	)
+	(pad "" np_thru_hole circle
+		(at 5.5 0 180)
+		(size 1.7 1.7)
+		(drill 1.7)
+		(layers "*.Cu" "*.Mask")
+		(uuid "c4242b0c-d3d9-4397-a212-50acbbb404f9")
+	)
+	(pad "1" thru_hole circle
+		(at -5 3.8 180)
+		(size 2 2)
+		(drill 1.2)
+		(layers "*.Cu" "B.Mask")
+		(remove_unused_layers no)
+		(uuid "37f4b512-5167-40c6-a7c3-0309acdff617")
+	)
+	(pad "2" thru_hole circle
+		(at 0 5.9 180)
+		(size 2 2)
+		(drill 1.2)
+		(layers "*.Cu" "B.Mask")
+		(remove_unused_layers no)
+		(uuid "41e0d5c6-9768-4559-b8f6-3b1d4f1af45e")
+	)
+	(model "/Users/sboysel/repos/lattice/lib/lattice.3dmodels/choc_v1_red.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
